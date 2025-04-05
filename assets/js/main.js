@@ -1,3 +1,4 @@
+// text
 var typed = new Typed(".typed", {
   strings: [
     "Digital Marketing",
@@ -54,7 +55,7 @@ window.addEventListener("scroll", () => {
     active = false;
   }
 });
-
+// float menu
 const arrow = document.getElementById("scrollArrow");
 const firstSection = document.querySelector(".hero");
 
@@ -65,3 +66,41 @@ window.addEventListener("scroll", () => {
     arrow.style.display = "none";
   }
 });
+
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.onscroll = function () {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const totalHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+  const scrolledPercentage = (scrollTop / totalHeight) * 100;
+
+  if (scrolledPercentage > 5) {
+    scrollToTopBtn.style.opacity = "1";
+  } else {
+    scrollToTopBtn.style.opacity = "0";
+  }
+};
+
+const showSocial = () => {
+  document.querySelector(".float-social").classList.toggle("show-social");
+};
+
+//  FAQ
+function toggleFAQ(clickedQuestion) {
+  const allAnswers = document.querySelectorAll(".faq .answer");
+  const allQuestions = document.querySelectorAll(".faq .question");
+
+  const answer = clickedQuestion.nextElementSibling;
+  const isAlreadyOpen = answer.style.display === "block";
+
+  // Close all answers
+  allAnswers.forEach((ans) => (ans.style.display = "none"));
+  allQuestions.forEach((q) => q.classList.remove("active"));
+
+  // If the clicked one was not open, open it
+  if (!isAlreadyOpen) {
+    answer.style.display = "block";
+    clickedQuestion.classList.add("active");
+  }
+}
