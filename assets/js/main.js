@@ -1,17 +1,19 @@
 // text
-var typed = new Typed(".typed", {
-  strings: [
-    "Digital Marketing",
-    "SEO",
-    "Social Media Marketing",
-    "Lead Generation",
-    "Website Designing",
-    "Branding",
-  ],
-  typeSpeed: 150,
-  backSpeed: 100,
-  loop: true,
-});
+if (typeof Typed !== "undefined" && document.querySelector(".typed")) {
+  new Typed(".typed", {
+    strings: [
+      "Digital Marketing",
+      "SEO",
+      "Social Media Marketing",
+      "Lead Generation",
+      "Website Designing",
+      "Branding",
+    ],
+    typeSpeed: 150,
+    backSpeed: 100,
+    loop: true,
+  });
+}
 
 // =================================== scroll number count============================
 
@@ -102,5 +104,48 @@ function toggleFAQ(clickedQuestion) {
   if (!isAlreadyOpen) {
     answer.style.display = "block";
     clickedQuestion.classList.add("active");
+  }
+}
+// Sub-menu
+
+const subMenuShow = () => {
+  const subMenu = document.querySelector(".mobile-sub-menu");
+
+  subMenu.classList.toggle("show-sub-menu");
+};
+
+// main Menu
+
+const showMenu = () => {
+  const Menu = document.querySelector(".mobile-menu");
+  const open = document.querySelector(".open");
+  const close = document.querySelector(".close");
+  Menu.classList.toggle("show-menu");
+  open.classList.toggle("hide-bar");
+  close.classList.toggle("show-bar");
+};
+
+function showContent(section) {
+  const visionBtn = document.getElementById("vision-btn");
+  const missionBtn = document.getElementById("mission-btn");
+  const visionContent = document.getElementById("vision-content");
+  const missionContent = document.getElementById("mission-content");
+
+  if (section === 1) {
+    visionBtn.classList.add("active");
+    visionBtn.classList.remove("inactive");
+    missionBtn.classList.remove("active");
+    missionBtn.classList.add("inactive");
+
+    visionContent.classList.add("show");
+    missionContent.classList.remove("show");
+  } else {
+    missionBtn.classList.add("active");
+    missionBtn.classList.remove("inactive");
+    visionBtn.classList.remove("active");
+    visionBtn.classList.add("inactive");
+
+    missionContent.classList.add("show");
+    visionContent.classList.remove("show");
   }
 }

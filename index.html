@@ -26,8 +26,8 @@
           <img src="./assets/images/d-growlogo.png" alt="" />
         </div>
         <nav>
-          <a href="#">Home</a>
-          <a href="#">About</a>
+          <a href="./index.html">Home</a>
+          <a href="./assets/page/about.html">About</a>
           <div class="service-menu">
             <a class="" href="#"
               >Services <i class="fa-solid fa-caret-down"></i>
@@ -71,8 +71,55 @@
           <a href="#">Contact</a>
         </nav>
         <div class="btn">Med Grow</div>
+        <div onclick="showMenu()" class="menu-bar">
+          <div class="open">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="close">
+            <i class="fa-solid fa-x"></i>
+          </div>
+        </div>
       </div>
     </header>
+    <!-- ==============================MOBILE MENU ============================ -->
+    <div class="mobile-menu">
+      <nav>
+        <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="./assets/page/about.html"
+          ><i class="fa-solid fa-address-card"></i>About</a
+        >
+        <div class="mobile-service">
+          <a onclick="subMenuShow()"
+            ><i class="fa-brands fa-digital-ocean"></i>Services</a
+          >
+          <div class="mobile-sub-menu">
+            <a href="#"><i class="fa-solid fa-angles-right"></i>SEO</a>
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Social Media Marketing
+            </a>
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Lead Generate
+            </a>
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Web Designing &
+              Development</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Personal Branding</a
+            >
+          </div>
+        </div>
+        <a href="#"><i class="fa-solid fa-book"></i>Blog</a>
+        <a href="#"><i class="fa-solid fa-phone-volume"></i>Contact</a>
+      </nav>
+      <div class="mobile-social">
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-solid fa-phone"></i>
+      </div>
+    </div>
+    <!-- ==============================MOBILE MENU ============================ -->
     <!-- ==============================HEADER ============================ -->
     <!-- ==============================HOME ============================ -->
     <div class="hero">
@@ -84,7 +131,7 @@
             Service In Chennai
           </h3>
           <p>
-            We Provide Scalable Digital Marketing Solutions To Help You Achieve
+            We Provide Scalable aigital Marketing Solutions To Help You Achieve
             Your Business Goals.
           </p>
           <div class="btn">Start Now</div>
@@ -117,7 +164,7 @@
         <div class="counter">
           <h2><span data-count="60">0</span>DAYS</h2>
           <h4>Rank On Google's 1st Page</h4>
-          <div class="bg-img">
+          <div class="bg-img tab">
             <img src="./assets/images/mobile-arrow.webp" alt="" />
           </div>
         </div>
@@ -369,13 +416,15 @@
           </div>
         </div>
         <div class="right">
-          <h2>WORK PROCESS</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab odit
-            repudiandae nulla exercitationem quas excepturi tempore illo? Error
-            fuga, repudiandae recusandae eaque eos exercitationem corporis,
-            delectus inventore perspiciatis excepturi atque.
-          </p>
+          <div class="">
+            <h2>WORK PROCESS</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab odit
+              repudiandae nulla exercitationem quas excepturi tempore illo?
+              Error fuga, repudiandae recusandae eaque eos exercitationem
+              corporis, delectus inventore perspiciatis excepturi atque.
+            </p>
+          </div>
           <img src="./assets/images/hero.png" alt="" />
         </div>
       </div>
@@ -487,6 +536,7 @@
     </div>
     <!-- ==============================CTA3============================ -->
     <!-- ==============================FQA============================ -->
+    <div class="title"><h2>FAQ?</h2></div>
     <div class="faq-container">
       <div class="faq">
         <div class="faq-item">
@@ -616,7 +666,6 @@
         </div>
       </div>
     </div>
-
     <!-- ==============================FQA============================ -->
 
     <!-- ==============================CTA 4============================ -->
@@ -697,10 +746,10 @@
     </button>
     <!-- ==============================Float menu============================ -->
 
-    <!-- type.js -->
+    <!-- typed.js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- js -->
 
+    <!-- correct relative path to JS -->
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
