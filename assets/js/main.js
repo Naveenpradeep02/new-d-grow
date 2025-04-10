@@ -149,3 +149,158 @@ function showContent(section) {
     visionContent.classList.remove("show");
   }
 }
+
+// ======================
+document.addEventListener("click", function (e) {
+  const dropdown = document.querySelector(".dropdown");
+  if (!dropdown.contains(e.target)) {
+    dropdownMenu.style.display = "none";
+  }
+});
+
+const services = [
+  "Social Media Marketing(SMM)",
+  "Digital Marketing services",
+  "SEO Services",
+  "Google Ads (PPC)",
+  "SEO Content Writing",
+  "Product Listing + Amazon",
+  "Graphic Designing",
+  "Digital Marketing Consultation",
+  "Political Ads",
+  "Web Designing & Development",
+  "Lead Generation",
+  "WhatsApp Marketing",
+  "Email Marketing",
+  "Marketing Automation",
+  "Personal Branding",
+  "GMB Listing & Ranking",
+  "Lead Nurturing",
+  "Video Production (Personal Branding)",
+];
+
+const dropdownMenu = document.querySelector(".dropdown-menu");
+const dropdownOptions = document.getElementById("dropdown-options");
+const selectedOptionsBox = document.getElementById("selected-options");
+
+let selectedServices = [];
+
+function toggleDropdown() {
+  dropdownMenu.style.display =
+    dropdownMenu.style.display === "block" ? "none" : "block";
+}
+
+// Prevent dropdown from closing when clicking inside
+dropdownMenu.addEventListener("click", function (e) {
+  e.stopPropagation();
+});
+
+function renderDropdown() {
+  dropdownOptions.innerHTML = "";
+
+  const remaining = services.filter((s) => !selectedServices.includes(s));
+
+  if (remaining.length === 0) {
+    dropdownOptions.innerHTML = `<div class="p-2 text-gray-400">No more options</div>`;
+    return;
+  }
+
+  remaining.forEach((service) => {
+    const label = document.createElement("label");
+    label.className = "dropdown";
+    label.textContent = service;
+    label.onclick = (e) => {
+      e.stopPropagation(); // Prevent closing on selection
+      selectedServices.push(service);
+      renderDropdown();
+      renderSelectedTags();
+    };
+    dropdownOptions.appendChild(label);
+  });
+}
+
+function renderSelectedTags() {
+  selectedOptionsBox.innerHTML = "";
+
+  if (selectedServices.length === 0) {
+    selectedOptionsBox.innerHTML = '<span class="">No services selected</span>';
+    return;
+  }
+
+  selectedServices.forEach((service) => {
+    const tag = document.createElement("div");
+    tag.className = "red-color";
+
+    tag.innerHTML = `
+      <span class="service-span">${service}</span>
+      <button onclick="removeSelected('${service}' )"  class="btn-x" ><i class="fa-solid fa-x "></i>
+</button>
+    `;
+
+    selectedOptionsBox.appendChild(tag);
+  });
+}
+
+function removeSelected(service) {
+  selectedServices = selectedServices.filter((s) => s !== service);
+  renderDropdown();
+  renderSelectedTags();
+}
+
+// Initial render
+renderDropdown();
+
+const checkboxes = document.querySelectorAll(".budget-checkbox");
+const checkDivs = document.querySelectorAll(".budget-div");
+
+checkboxes.forEach((checkbox, index) => {
+  checkbox.addEventListener("change", () => {
+    // Uncheck all others
+    checkboxes.forEach((cb, i) => {
+      if (cb !== checkbox) {
+        cb.checked = false;
+        checkDivs[i].classList.remove("box-check");
+        checkDivs[i].children[0].classList.add("hidden", "box-check"); // hide ✔
+      }
+    });
+
+    // Toggle styling for the selected one
+    if (checkbox.checked) {
+      checkDivs[index].classList.add("box-check-bg");
+      checkDivs[index].children[0].classList.remove("hidden"); // show ✔
+    } else {
+      checkDivs[index].classList.remove("box-check-bg");
+      checkDivs[index].children[0].classList.add("hidden");
+    }
+  });
+});
+
+document.getElementById("myForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+  const formData = new FormData(this);
+  const submitButton = document.getElementById("submitButton");
+
+  submitButton.disabled = true;
+  submitButton.textContent = "Submitting...";
+
+  fetch(this.action, {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.result === "success") {
+        alert("Form submitted successfully!");
+        window.location.href = "thank-you.html"; // or index.html
+      } else {
+        alert("Form submission failed.");
+      }
+      submitButton.disabled = false;
+      submitButton.textContent = "Submit";
+    })
+    .catch((error) => {
+      alert("Network error. Try again.");
+      submitButton.disabled = false;
+      submitButton.textContent = "Submit";
+    });
+});

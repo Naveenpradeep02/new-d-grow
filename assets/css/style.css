@@ -116,6 +116,8 @@ nav a {
   padding: 7px 25px;
   border-radius: 25px;
   background-color: var(--green-color);
+  border: none;
+  outline: none;
 }
 .sub-service {
   width: 100%;
@@ -856,6 +858,122 @@ hr {
 .about .cta h2 {
   font-size: 28px;
 }
+/* contact */
+.contact {
+  padding: 60px 0px;
+}
+.contact h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--med-red-color);
+  font-weight: 800;
+}
+.com-profile {
+  background: var(--red-and-black);
+  width: 200px;
+  height: 200px;
+  margin: 0px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.btn-red {
+  width: 250px;
+  background-color: var(--med-red-color);
+  text-align: center;
+  margin: 0 auto;
+}
+.google-map {
+  filter: grayscale(100%);
+}
+.google-map:hover {
+  filter: grayscale(0%);
+}
+.names {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.name,
+.emails {
+  display: flex;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+label {
+  font-size: 15px;
+  color: var(--black-color);
+  font-weight: 400;
+}
+input {
+  width: 100%;
+  outline: none;
+  padding: 11px 15px;
+  border: 1px solid #dadbdd;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+.contact button {
+  color: var(--white-color);
+}
+.selected-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.selected-options span {
+  padding: 10px;
+  border-radius: 6px;
+}
+.btn-x {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  border: none;
+  border: 1px solid var(--black-color);
+  background-color: var(--white-color);
+}
+.btn-x i {
+  color: var(--med-red-color);
+  font-size: 12px;
+  margin: auto;
+}
+.service-span {
+  background-color: var(--light-red-color);
+}
+.input-style {
+  color: var(--black-color);
+}
+.dropdown {
+  display: flex;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
+}
+.bold-lable {
+  font-weight: 600;
+}
+.check-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.box-check {
+  border: 1px solid var(--med-red-color);
+  padding: 2px 6px;
+  border-radius: 50%;
+  background-color: var(--med-red-color);
+}
 /* ==========================================Other pages */
 /* ==========================================MEDIA QUERY */
 
@@ -983,6 +1101,9 @@ hr {
   .about-section2 .boxs1 {
     grid-template-columns: repeat(1, 1fr);
     padding: 20px;
+  }
+  .names {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 /* MOBILE */

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/d-growlogo.png" />
+    <title>D-Grow</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- font - icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- ==============================HEADER ============================ -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="../images/d-growlogo.png" alt="" />
+        </div>
+        <nav>
+          <a href="../../index.html">Home</a>
+          <a href="./about.html">About</a>
+          <div class="service-menu">
+            <a class="" href="#"
+              >Services <i class="fa-solid fa-caret-down"></i>
+            </a>
+
+            <div class="sub-service">
+              <ul class="service-list">
+                <li>
+                  <a class="list" href="#">
+                    <i class="fa-brands fa-digital-ocean"></i>
+                    SEO
+                  </a>
+                </li>
+                <li>
+                  <a class="list" href="#">
+                    <i class="fa-solid fa-comments-dollar"></i>
+                    Social Media Marketing + Management
+                  </a>
+                </li>
+                <li>
+                  <a class="list" href="#">
+                    <i class="fa-solid fa-note-sticky"></i>
+                    Lead Generate
+                  </a>
+                </li>
+                <li>
+                  <a class="list" href="#">
+                    <i class="fa-solid fa-earth-americas"></i> Web Designing &
+                    Development
+                  </a>
+                </li>
+                <li>
+                  <a class="list" href="#">
+                    <i class="fa-solid fa-web-awesome"></i> Personal Branding
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a href="./blog.html">Blog</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="btn">Med Grow</div>
+        <div onclick="showMenu()" class="menu-bar">
+          <div class="open">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="close">
+            <i class="fa-solid fa-x"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ==============================MOBILE MENU ============================ -->
+    <div class="mobile-menu">
+      <nav>
+        <a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="./about.html"><i class="fa-solid fa-address-card"></i>About</a>
+        <div class="mobile-service">
+          <a onclick="subMenuShow()"
+            ><i class="fa-brands fa-digital-ocean"></i>Services</a
+          >
+          <div class="mobile-sub-menu">
+            <a href="#"><i class="fa-solid fa-angles-right"></i>SEO</a>
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Social Media Marketing
+            </a>
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Lead Generate
+            </a>
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Web Designing &
+              Development</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Personal Branding</a
+            >
+          </div>
+        </div>
+        <a href="./blog.html"><i class="fa-solid fa-book"></i>Blog</a>
+        <a href="./contact.html"
+          ><i class="fa-solid fa-phone-volume"></i>Contact</a
+        >
+      </nav>
+      <div class="mobile-social">
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-solid fa-phone"></i>
+      </div>
+    </div>
+    <!-- ==============================MOBILE MENU ============================ -->
+    <!-- ==============================HEADER ============================ -->
+    <!-- ==============================PAGE TOP SECTION ============================ -->
+    <div class="hero-section">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>
+          <a class="inner-menu" href="../../index.html"
+            >Home <i class="fa-solid fa-angle-right"></i
+          ></a>
+          <a href="#">Contact</a>
+        </p>
+      </div>
+    </div>
+    <!-- ==============================PAGE TOP SECTION ============================ -->
+    <div class="about">
+      <div class="section contact">
+        <div class="container">
+          <div class="right">
+            <div class="com-profile">
+              <img src="../images/d-grow-footer.png" alt="" />
+            </div>
+            <h3>Connect with Me Today!</h3>
+            <div class="btn btn-red">Meet Me</div>
+            <div class="btn btn-red">WhatsApp Me</div>
+            <div class="btn btn-red">Hire Me</div>
+            <div class="btn btn-red">Call Me</div>
+            <div class="btn btn-red">Email Me</div>
+          </div>
+          <div class="left">
+            <h3>Fill This Form To 10X Your Business</h3>
+
+            <form action="">
+              <div class="names">
+                <div class="name">
+                  <label for="firstName"> First Name </label>
+                  <input type="text" name="firstName" id="firstName" />
+                </div>
+                <div class="name">
+                  <label for="lastName"> Last Name </label>
+                  <input type="text" name="lastName" id="lastName" />
+                </div>
+              </div>
+              <div class="emails">
+                <label for="phone">Mobile Number</label>
+                <input
+                  type="number"
+                  name="phone"
+                  id="phone"
+                  placeholder="Contact number"
+                />
+              </div>
+              <div class="emails">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="xyz@email"
+                />
+              </div>
+              <div class="emails">
+                <label for="link">Your Website Link?</label>
+                <input type="text" name="link" id="link" />
+              </div>
+              <label class="label-style bold-lable"
+                >Which Service Are You Looking For?</label
+              >
+              <div id="selected-options" class="selected-options">
+                <span>No services selected</span>
+              </div>
+              <div class="dropdown" style="position: relative">
+                <a
+                  href="javascript:void(0)"
+                  onclick="toggleDropdown()"
+                  class="input-style"
+                >
+                  Select Services ▼
+                </a>
+                <div
+                  class="dropdown-menu"
+                  style="
+                    display: none;
+                    position: absolute;
+                    z-index: 10;
+                    background: white;
+                    border: 1px solid #ccc;
+                    max-height: 200px;
+                    overflow-y: auto;
+                    width: 100%;
+                    margin-top: 5px;
+                  "
+                >
+                  <div id="dropdown-options"></div>
+                </div>
+              </div>
+              <div class="emails">
+                <label class="bold-lable">Your Marketing Budget?</label>
+                <div class="check-lists">
+                  <label class="cursor-pointer">
+                    <div
+                      class="border rounded p-2 flex items-center gap-2 budget-div"
+                    >
+                      <span class="hidden">✔</span>
+                      <input
+                        type="radio"
+                        class="budget-checkbox hidden"
+                        name="budget"
+                        value="35000"
+                      />
+                      <span>35k to 50k</span>
+                    </div>
+                  </label>
+                  <label class="cursor-pointer">
+                    <div
+                      class="border rounded p-2 flex items-center gap-2 budget-div"
+                    >
+                      <span class="hidden">✔</span>
+                      <input
+                        type="radio"
+                        class="budget-checkbox hidden"
+                        name="budget"
+                        value="75000"
+                      />
+                      <span>50k to 1L</span>
+                    </div>
+                  </label>
+                  <label class="cursor-pointer">
+                    <div
+                      class="border rounded p-2 flex items-center gap-2 budget-div"
+                    >
+                      <span class="hidden">✔</span>
+                      <input
+                        type="radio"
+                        class="budget-checkbox hidden"
+                        name="budget"
+                        value="100000"
+                      />
+                      <span>1L to 2L</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="emails">
+                <label for="business" class="bold-lable"
+                  >What kind of problem you are facing in your business?</label
+                >
+                <input type="text" name="business" id="business" />
+              </div>
+
+              <button type="submit" id="submitButton" class="btn">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ==============================PAGE TOP SECTION ============================ -->
+    <div class="google-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8881688918104!2d80.16366!3d13.042789700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52617dd6e2c1c3%3A0x44ea1e61a691dc8a!2sD-Grow%20Marketing%20Agency%20%7C%20The%20Best%20Digital%20Marketing%20%26%20SEO%20Agency%20In%20India!5e0!3m2!1sen!2sin!4v1738829569924!5m2!1sen!2sin"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <!-- ==============================FOOTER============================ -->
+    <footer>
+      <div class="container">
+        <div class="footer-box">
+          <a href="../../index.html">Home </a>
+          <a href="../page/about.html">About Us </a>
+          <a href="#">Services </a>
+          <a href="#">SEO Service </a>
+          <a href="#">Social Media Marketing </a>
+          <a href="../page/contact.html">Contact Us</a>
+          <div class="social-icon">
+            <a href="#"></a>
+          </div>
+        </div>
+        <div class="footer-box address">
+          <img src="../images/d-grow-footer.png" alt="" />
+          <p>
+            Plot No. 141, SF No: 14/3 Radha Avenue Main Road, Valasaravakkam,
+            Chennai - 600087
+          </p>
+          <a href="#">+91 7373509585</a>
+          <a href="#"> enquiry@dgrowmarketing.com</a>
+        </div>
+      </div>
+      <hr />
+      <a href="">
+        <p class="copy">Copyright © 2024 D-Grow Marketing Agency</p></a
+      >
+    </footer>
+    <!-- ==============================FOOTER============================ -->
+    <!-- ==============================Float menu============================ -->
+    <button id="scrollToTop">
+      <a class="bg-icon" onclick="showSocial()" title="Social Media"
+        ><i class="fa-solid fa-share-alt"></i
+      ></a>
+      <a class="bg-icon" href="#" title="Go to top"
+        ><i class="fa-solid fa-arrow-up"></i
+      ></a>
+
+      <div class="float-social">
+        <a class="whatsapp" href="" title="WhatsApp"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+        <a class="insta" href="" title="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a class="env" href="" title="Email Me"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+        <a class="phone" href="" title="Contact "
+          ><i class="fa-solid fa-phone"></i
+        ></a>
+      </div>
+    </button>
+    <!-- type -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- js -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>
