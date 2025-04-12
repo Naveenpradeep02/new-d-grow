@@ -572,10 +572,17 @@ h3 span {
 }
 /* ==========================================PEOPLE  */
 /* ==========================================FQA  */
+.title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0px;
+}
 .title h2 {
   color: var(--med-red-color);
-  text-align: center;
-  margin-top: 30px;
+}
+.title p {
+  color: var(--white-color);
 }
 .faq-container {
   width: 80%;
@@ -764,6 +771,11 @@ hr {
 .hero-section h1 {
   margin-bottom: 20px;
 }
+.hero-section p {
+  color: var(--white-color);
+  font-size: 15px;
+  margin-bottom: 10px;
+}
 .inner-menu {
   opacity: 0.7;
   transition: all 0.3s ease-in-out;
@@ -799,6 +811,9 @@ hr {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+}
+.about-section2 .boxs2 {
+  grid-template-columns: repeat(3, 1fr);
 }
 .about-section2 .box {
   border: 2px solid var(--white-color);
@@ -974,6 +989,94 @@ input {
   border-radius: 50%;
   background-color: var(--med-red-color);
 }
+/* seo */
+.seo .section-text {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+.seo .section-text h4 {
+  font-size: 18px;
+  margin: 10px 0px;
+}
+.seo .btn {
+  margin: 10px 0px;
+}
+.seo-cta .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.seo-cta {
+  background: var(--red-and-black);
+  color: var(--white-color);
+}
+.seo-cta .cta-text {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.seo-cta .cta-text p {
+  margin-bottom: 10px;
+  text-align: start;
+}
+.cta-text .text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--black-color);
+}
+.cta-text .text p {
+  background-color: var(--white-color);
+  padding: 20px;
+  border-radius: 12px;
+}
+.seo-cta .cta-btn {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  margin-bottom: 230px;
+}
+.seo-cta .cta-btn-2 {
+  margin-bottom: 0px;
+}
+.seo-cta-1 {
+  background: var(--light-red-color);
+  color: var(--black-color);
+}
+.seo-3 .container {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+}
+.seo-3 .container .section-img img {
+  width: 100%;
+}
+.seo-left {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.seo-box {
+  display: flex;
+  gap: 10px;
+  border-left: 5px solid var(--med-red-color);
+  border-radius: 0px 20px;
+  padding: 15px;
+  background-color: var(--light-red-color);
+  margin-bottom: 15px;
+}
+.seo-box .text {
+  color: var(--black-color);
+}
+.seo-box .text h4 {
+  font-size: 17px;
+}
+.seo-box .text p {
+  font-size: 14px;
+  line-height: 22px;
+}
+.cta-btn-2 img {
+  width: 100%;
+}
 /* ==========================================Other pages */
 /* ==========================================MEDIA QUERY */
 
@@ -1105,6 +1208,24 @@ input {
   .names {
     grid-template-columns: repeat(1, 1fr);
   }
+  .seo-cta .container {
+    grid-template-columns: 1fr;
+  }
+  .seo-left {
+    grid-template-columns: 1fr;
+  }
+  .seo-3 .container {
+    grid-template-columns: 1fr;
+  }
+  .cta-text .text {
+    flex-direction: column;
+  }
+  .seo-cta .cta-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+  }
 }
 /* MOBILE */
 /* tablet */
@@ -1224,6 +1345,24 @@ input {
     grid-template-columns: repeat(2, 1fr);
     padding: 20px;
   }
+  .seo-cta .container {
+    grid-template-columns: 1fr;
+  }
+  .seo-left {
+    grid-template-columns: 1fr;
+  }
+  .seo-3 .container {
+    grid-template-columns: 1fr;
+  }
+  .cta-text .text {
+    flex-direction: column;
+  }
+  .seo-cta .cta-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+  }
 }
 /* tablet */
 /* laptop */
@@ -1315,6 +1454,24 @@ input {
   .about-section2 .boxs1 {
     grid-template-columns: repeat(3, 1fr);
     padding: 20px;
+  }
+  .seo-cta .container {
+    grid-template-columns: 1fr;
+  }
+  .seo-left {
+    grid-template-columns: 1fr;
+  }
+  .seo-3 .container {
+    grid-template-columns: 1fr;
+  }
+  .cta-text .text {
+    flex-direction: column;
+  }
+  .seo-cta .cta-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
   }
 }
 /* laptop */
