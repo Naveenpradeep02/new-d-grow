@@ -149,11 +149,15 @@
           <div class="left">
             <h3>Fill This Form To 10X Your Business</h3>
 
-            <form action="">
+            <form
+              id="contactForm"
+              method="post"
+              action="https://script.google.com/macros/s/AKfycbzmqyI2w36fUREIapIhxBAqieBNVxNtooiLLlw3dc6Npr1q6pkj6q3JiyzzNY7-f2US/exec"
+            >
               <div class="names">
                 <div class="name">
                   <label for="firstName"> First Name </label>
-                  <input type="text" name="firstName" id="firstName" />
+                  <input type="text" name="firstName" id="firstName" required />
                 </div>
                 <div class="name">
                   <label for="lastName"> Last Name </label>
@@ -167,6 +171,7 @@
                   name="phone"
                   id="phone"
                   placeholder="Contact number"
+                  required
                 />
               </div>
               <div class="emails">
@@ -176,11 +181,12 @@
                   name="email"
                   id="email"
                   placeholder="xyz@email"
+                  required
                 />
               </div>
               <div class="emails">
                 <label for="link">Your Website Link?</label>
-                <input type="text" name="link" id="link" />
+                <input type="text" name="link" id="link" required />
               </div>
               <label class="label-style bold-lable"
                 >Which Service Are You Looking For?</label
@@ -188,6 +194,8 @@
               <div id="selected-options" class="selected-options">
                 <span>No services selected</span>
               </div>
+              <input type="hidden" name="services" id="servicesInput" />
+
               <div class="dropdown" style="position: relative">
                 <a
                   href="javascript:void(0)"
@@ -213,6 +221,7 @@
                   <div id="dropdown-options"></div>
                 </div>
               </div>
+
               <div class="emails">
                 <label class="bold-lable">Your Marketing Budget?</label>
                 <div class="check-lists">
@@ -264,7 +273,7 @@
                 <label for="business" class="bold-lable"
                   >What kind of problem you are facing in your business?</label
                 >
-                <input type="text" name="business" id="business" />
+                <input type="text" name="business" id="business" required />
               </div>
 
               <button type="submit" id="submitButton" class="btn">
