@@ -141,6 +141,11 @@ nav .service-menu a:focus + .sub-service,
   grid-template-columns: repeat(5, 1fr);
   height: 150px;
 }
+.service-menu-text {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 .service-list .list {
   height: 100%;
   color: var(--white-color);
@@ -362,8 +367,10 @@ h3 span {
   flex-direction: column;
 }
 .cta-4 h2,
-.cta-4 p {
+.cta-4 p,
+.cta-4 h4 {
   text-align: center;
+  margin-bottom: 20px;
 }
 .cta-4 .cta-btn {
   margin-top: 30px;
@@ -1109,6 +1116,7 @@ input {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+  overflow: hidden;
 }
 .service-img i {
   font-size: 38px;
@@ -1170,6 +1178,7 @@ input {
 .blog-text .text p {
   font-size: 18px;
   color: var(--black-color);
+  margin-bottom: 20px;
 }
 .blog-text .btn {
   font-size: 16px;

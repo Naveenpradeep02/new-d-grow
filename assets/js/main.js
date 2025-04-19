@@ -1,9 +1,10 @@
-// text
+console.log("main.js loaded");
+
 document.addEventListener("DOMContentLoaded", function () {
   console.log("main.js loaded");
-  document.addEventListener("DOMContentLoaded", function () {
-    console.log("DOM fully loaded and parsed");
-  });
+  console.log("DOM fully loaded and parsed");
+
+  // Typed JS
   if (typeof Typed !== "undefined" && document.querySelector(".typed")) {
     new Typed(".typed", {
       strings: [
@@ -20,117 +21,122 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // =================================== scroll number count============================
-
+  // Scroll number count
   const counters = document.querySelectorAll(".counter span");
   const container = document.querySelector(".counters");
   let active = false;
 
-  window.addEventListener("scroll", () => {
-    if (
-      window.pageYOffset > container.offsetTop - container.offsetHeight - 500 &&
-      !active
-    ) {
-      counters.forEach((counter) => {
-        counter.innerHTML = 0;
-        let count = 0;
-        const target = parseInt(counter.dataset.count);
-        const increment = Math.ceil(target / 100); // Adjust speed dynamically
+  if (container) {
+    window.addEventListener("scroll", () => {
+      if (
+        window.pageYOffset >
+          container.offsetTop - container.offsetHeight - 500 &&
+        !active
+      ) {
+        counters.forEach((counter) => {
+          counter.innerHTML = 0;
+          let count = 0;
+          const target = parseInt(counter.dataset.count);
+          const increment = Math.ceil(target / 100);
 
-        const updateCount = () => {
-          if (count < target) {
-            count += increment;
-            if (count > target) count = target; // Prevent overshooting
-            counter.innerHTML = count;
-            setTimeout(updateCount, 15);
-          } else {
-            counter.innerHTML = target;
-          }
-        };
+          const updateCount = () => {
+            if (count < target) {
+              count += increment;
+              if (count > target) count = target;
+              counter.innerHTML = count;
+              setTimeout(updateCount, 15);
+            } else {
+              counter.innerHTML = target;
+            }
+          };
 
-        updateCount();
-      });
+          updateCount();
+        });
+        active = true;
+      } else if (
+        window.pageYOffset <
+          container.offsetTop - container.offsetHeight - 500 &&
+        active
+      ) {
+        counters.forEach((counter) => (counter.innerHTML = 0));
+        active = false;
+      }
+    });
+  }
 
-      active = true;
-    } else if (
-      window.pageYOffset < container.offsetTop - container.offsetHeight - 500 &&
-      active
-    ) {
-      counters.forEach((counter) => {
-        counter.innerHTML = 0;
-      });
-      active = false;
-    }
-  });
-  // float menu
+  // Scroll Arrow
   const arrow = document.getElementById("scrollArrow");
   const firstSection = document.querySelector(".hero");
 
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset > firstSection.offsetHeight) {
-      arrow.style.display = "block";
-    } else {
-      arrow.style.display = "none";
-    }
-  });
+  if (arrow && firstSection) {
+    window.addEventListener("scroll", () => {
+      arrow.style.display =
+        window.pageYOffset > firstSection.offsetHeight ? "block" : "none";
+    });
+  }
 
   const scrollToTopBtn = document.getElementById("scrollToTop");
+  if (scrollToTopBtn) {
+    window.onscroll = function () {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const totalHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrolledPercentage = (scrollTop / totalHeight) * 100;
 
-  window.onscroll = function () {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const totalHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const scrolledPercentage = (scrollTop / totalHeight) * 100;
+      scrollToTopBtn.style.opacity = scrolledPercentage > 5 ? "1" : "0";
+    };
+  }
 
-    if (scrolledPercentage > 5) {
-      scrollToTopBtn.style.opacity = "1";
-    } else {
-      scrollToTopBtn.style.opacity = "0";
-    }
-  };
-
-  const showSocial = () => {
-    document.querySelector(".float-social").classList.toggle("show-social");
-  };
-
-  //  FAQ
-  function toggleFAQ(clickedQuestion) {
+  // FAQ Toggle
+  window.toggleFAQ = function (clickedQuestion) {
     const allAnswers = document.querySelectorAll(".faq .answer");
     const allQuestions = document.querySelectorAll(".faq .question");
 
     const answer = clickedQuestion.nextElementSibling;
     const isAlreadyOpen = answer.style.display === "block";
 
-    // Close all answers
     allAnswers.forEach((ans) => (ans.style.display = "none"));
     allQuestions.forEach((q) => q.classList.remove("active"));
 
-    // If the clicked one was not open, open it
     if (!isAlreadyOpen) {
       answer.style.display = "block";
       clickedQuestion.classList.add("active");
     }
-  }
-  // Sub-menu
-
-  const subMenuShow = () => {
-    const subMenu = document.querySelector(".mobile-sub-menu");
-
-    subMenu.classList.toggle("show-sub-menu");
   };
 
-  // main Menu
+  // Sub-menu toggle
+  window.subMenuShow = function () {
+    const subMenu = document.querySelector(".mobile-sub-menu");
+    if (subMenu) subMenu.classList.toggle("show-sub-menu");
+  };
 
-  const showMenu = () => {
+  // ✅ Fixed Error Here
+  const serviceMenuLink = document.querySelector(".service-menu > a");
+  if (serviceMenuLink) {
+    serviceMenuLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      const subMenu = document.querySelector(".sub-service");
+      if (subMenu) {
+        subMenu.style.display =
+          subMenu.style.display === "block" ? "none" : "block";
+      }
+    });
+  }
+
+  // Mobile menu
+  window.showMenu = function () {
     const Menu = document.querySelector(".mobile-menu");
     const open = document.querySelector(".open");
     const close = document.querySelector(".close");
-    Menu.classList.toggle("show-menu");
-    open.classList.toggle("hide-bar");
-    close.classList.toggle("show-bar");
+
+    if (Menu && open && close) {
+      Menu.classList.toggle("show-menu");
+      open.classList.toggle("hide-bar");
+      close.classList.toggle("show-bar");
+    }
   };
 
-  function showContent(section) {
+  window.showContent = function (section) {
     const visionBtn = document.getElementById("vision-btn");
     const missionBtn = document.getElementById("mission-btn");
     const visionContent = document.getElementById("vision-content");
@@ -138,33 +144,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (section === 1) {
       visionBtn.classList.add("active");
-      visionBtn.classList.remove("inactive");
       missionBtn.classList.remove("active");
+      visionBtn.classList.remove("inactive");
       missionBtn.classList.add("inactive");
-
       visionContent.classList.add("show");
       missionContent.classList.remove("show");
     } else {
       missionBtn.classList.add("active");
-      missionBtn.classList.remove("inactive");
       visionBtn.classList.remove("active");
+      missionBtn.classList.remove("inactive");
       visionBtn.classList.add("inactive");
-
       missionContent.classList.add("show");
       visionContent.classList.remove("show");
     }
-  }
+  };
 
-  // ======================
+  // Dropdown close logic
   document.addEventListener("click", function (e) {
-    const dropdown = document.querySelector(".dropdown");
-    const dropdownMenu = document.querySelector(".dropdown-menu");
+    const dropdown1 = document.querySelector(".dropdown");
+    const dropdown2 = document.querySelector(".service-menu");
+    const dropdownMenu1 = document.querySelector(".dropdown-menu");
+    const dropdownMenu2 = document.querySelector(".sub-service");
 
-    if (!dropdown.contains(e.target)) {
-      dropdownMenu.style.display = "none";
+    if (dropdown1 && dropdownMenu1 && !dropdown1.contains(e.target)) {
+      dropdownMenu1.style.display = "none";
+    }
+
+    if (dropdown2 && dropdownMenu2 && !dropdown2.contains(e.target)) {
+      dropdownMenu2.style.display = "none";
     }
   });
 
+  // Dropdown services
   const services = [
     "Social Media Marketing(SMM)",
     "Digital Marketing services",
@@ -196,18 +207,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let selectedServices = [];
 
-  function toggleDropdown() {
-    dropdownMenu.style.display =
-      dropdownMenu.style.display === "block" ? "none" : "block";
+  window.toggleDropdown = function () {
+    if (dropdownMenu) {
+      dropdownMenu.style.display =
+        dropdownMenu.style.display === "block" ? "none" : "block";
+    }
+  };
+
+  if (dropdownMenu) {
+    dropdownMenu.addEventListener("click", (e) => e.stopPropagation());
   }
 
-  dropdownMenu.addEventListener("click", (e) => e.stopPropagation());
-  document.addEventListener("click", function (e) {
-    const dropdown = document.querySelector(".dropdown");
-    if (!dropdown.contains(e.target)) dropdownMenu.style.display = "none";
-  });
-
   function renderDropdown() {
+    if (!dropdownOptions) return;
+
     dropdownOptions.innerHTML = "";
     const remaining = services.filter((s) => !selectedServices.includes(s));
 
@@ -231,6 +244,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function renderSelectedTags() {
+    if (!selectedOptionsBox) return;
+
     selectedOptionsBox.innerHTML = "";
 
     if (selectedServices.length === 0) {
@@ -243,150 +258,114 @@ document.addEventListener("DOMContentLoaded", function () {
       const tag = document.createElement("div");
       tag.className = "red-color";
       tag.innerHTML = `
-        <span class="service-span">${service}</span>
-        <button onclick="removeSelected('${service}')" class="btn-x"><i class="fa-solid fa-x"></i></button>
-      `;
+          <span class="service-span">${service}</span>
+          <button onclick="removeSelected('${service}')" class="btn-x"><i class="fa-solid fa-x"></i></button>
+        `;
       selectedOptionsBox.appendChild(tag);
     });
 
     updateServicesInput();
   }
 
-  function removeSelected(service) {
+  window.removeSelected = function (service) {
     selectedServices = selectedServices.filter((s) => s !== service);
     renderDropdown();
     renderSelectedTags();
-  }
+  };
 
   function updateServicesInput() {
-    servicesInput.value = selectedServices.join(", ");
+    if (servicesInput) {
+      servicesInput.value = selectedServices.join(", ");
+    }
   }
 
   renderDropdown();
 
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
+  if (form) {
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-    const firstName = document.getElementById("firstName").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phoneRegex = /^[0-9]{10}$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const selectedBudget = document.querySelector(
-      'input[name="budget"]:checked'
-    );
-
-    // Basic Validations
-    if (!firstName || firstName.length < 3) {
-      alert("First name must be at least 3 characters long.");
-      return;
-    }
-
-    if (!selectedServices.length) {
-      alert("Please select at least one service.");
-      return;
-    }
-
-    if (!selectedBudget) {
-      alert("Please select a marketing budget.");
-      return;
-    }
-
-    if (!phoneRegex.test(phone)) {
-      alert("Please enter a valid 10-digit mobile number.");
-      return;
-    }
-
-    if (!emailRegex.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-
-    submitButton.disabled = true;
-    submitButton.textContent = "Submitting...";
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzmqyI2w36fUREIapIhxBAqieBNVxNtooiLLlw3dc6Npr1q6pkj6q3JiyzzNY7-f2US/exec",
-        {
-          method: "POST",
-          body: formData,
-        }
+      const firstName = document.getElementById("firstName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phoneRegex = /^[0-9]{10}$/;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const selectedBudget = document.querySelector(
+        'input[name="budget"]:checked'
       );
 
-      if (response.ok) {
-        window.location.href = "/"; // ✅ Redirect to homepage
-      } else {
-        alert("Submission failed. Please try again.");
+      if (!firstName || firstName.length < 3) {
+        alert("First name must be at least 3 characters long.");
+        return;
+      }
+
+      if (!selectedServices.length) {
+        alert("Please select at least one service.");
+        return;
+      }
+
+      if (!selectedBudget) {
+        alert("Please select a marketing budget.");
+        return;
+      }
+
+      if (!phoneRegex.test(phone)) {
+        alert("Please enter a valid 10-digit mobile number.");
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          window.location.href = "/";
+        } else {
+          alert("Submission failed. Please try again.");
+          submitButton.disabled = false;
+          submitButton.textContent = "Submit";
+        }
+      } catch (error) {
+        alert("Network error. Please try again.");
         submitButton.disabled = false;
         submitButton.textContent = "Submit";
       }
-    } catch (error) {
-      alert("Network error. Please try again.");
-      submitButton.disabled = false;
-      submitButton.textContent = "Submit";
-    }
-  });
+    });
+  }
 
-  // Initialize dropdown on page load
-  renderDropdown();
-
+  // Budget Selection Styling
   const checkboxes = document.querySelectorAll(".budget-checkbox");
   const checkDivs = document.querySelectorAll(".budget-div");
 
   checkboxes.forEach((checkbox, index) => {
     checkbox.addEventListener("change", () => {
-      // Uncheck all others
       checkboxes.forEach((cb, i) => {
         if (cb !== checkbox) {
           cb.checked = false;
           checkDivs[i].classList.remove("box-check");
-          checkDivs[i].children[0].classList.add("hidden", "box-check"); // hide ✔
+          checkDivs[i].children[0].classList.add("hidden", "box-check");
         }
       });
 
-      // Toggle styling for the selected one
       if (checkbox.checked) {
         checkDivs[index].classList.add("box-check-bg");
-        checkDivs[index].children[0].classList.remove("hidden"); // show ✔
+        checkDivs[index].children[0].classList.remove("hidden");
       } else {
         checkDivs[index].classList.remove("box-check-bg");
         checkDivs[index].children[0].classList.add("hidden");
       }
     });
   });
-
-  document
-    .getElementById("myForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-      const formData = new FormData(this);
-      const submitButton = document.getElementById("submitButton");
-
-      submitButton.disabled = true;
-      submitButton.textContent = "Submitting...";
-
-      fetch(this.action, {
-        method: "POST",
-        body: formData,
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.result === "success") {
-            alert("Form submitted successfully!");
-            window.location.href = "thank-you.html"; // or index.html
-          } else {
-            alert("Form submission failed.");
-          }
-          submitButton.disabled = false;
-          submitButton.textContent = "Submit";
-        })
-        .catch((error) => {
-          alert("Network error. Try again.");
-          submitButton.disabled = false;
-          submitButton.textContent = "Submit";
-        });
-    });
 });
