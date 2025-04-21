@@ -1134,6 +1134,9 @@ input {
 .s-btn {
   margin-top: 20px;
 }
+.blog-container {
+  padding-top: 60px;
+}
 .blog-box {
   display: flex;
   background-color: var(--light-red-color);
@@ -1155,7 +1158,7 @@ input {
   object-fit: cover;
 }
 .blog-text {
-  width: 100%;
+  width: 50%;
   padding: 25px 40px;
   display: flex;
   flex-direction: column;
@@ -1184,7 +1187,103 @@ input {
   font-size: 16px;
   background-color: var(--med-red-color);
 }
+.blog-det-container{
+  padding: 40px 0px;
+}
+.blog-det-container h2{
+color: var(--red-color);
+margin-bottom: 20px;
+font-weight: 800;
+}
+.blog-det-container h4{
+  color: var(--med-red-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.blog-det-container h5{
+  font-size: 18px;
+  margin-bottom: 10px;
 
+}
+.blog-det-container p{
+  margin-bottom: 15px;
+  color: var(--black-color);
+}
+.blog-content{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+}
+.blog-card{
+  padding: 15px 0px;
+}
+.blog-form{
+  width: 70%;
+  margin: auto;
+  height: 100%;
+  position: relative;
+
+}
+.news{
+  position: sticky;
+   top: 150px;
+   width: 100%;
+   height: fit-content;
+   background-color: var(--light-red-color);
+   border-radius: 20px;
+   border: 2px solid var(--red-color);
+   padding: 20px;
+   display: flex;
+   
+   flex-direction: column;
+}
+.news h3{
+  color: var(--red-color);
+}
+.news h5{
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: var(--med-red-color);
+}
+.news p{
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.news .btn{
+  margin: 10px auto;
+}
+.blog-section p{
+  font-size: 16px;
+}
+.blog-section ul{
+  padding-left: 40px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.blog-section ul li{
+  list-style: decimal;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.inner-indec-box{
+  display: flex;
+  flex-direction: column;
+ 
+}
+.inner-indec-box a{
+  color: var(--black-color);
+   background-color: var(--light-red-color);
+  border-left: 4px solid var(--light-red-color);
+
+  padding: 10px 25px;
+  margin-bottom: 20px;
+  transition: all .4s ease-in-out;
+}
+.inner-indec-box a:hover{
+  background-color: var(--med-red-color);
+  border-left: 4px solid var(--black-color);
+  transition: all .4s ease-in-out;
+
+}
 /* ==========================================Other pages */
 /* ==========================================MEDIA QUERY */
 

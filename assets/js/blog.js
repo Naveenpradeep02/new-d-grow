@@ -4,7 +4,7 @@ const Blog = [
   {
     id: 1,
     imageUrl: "../images/blog-1.png",
-    blogTitle: "Build a Portfolio-First Website",
+    blogTitle: "1. Build a Portfolio-First Website",
     subTitle1: "Why it matters",
     des1: "Clients want to see your past work before they even consider contacting you.",
     subTitle2: "What to include",
@@ -23,7 +23,7 @@ const Blog = [
   {
     id: 2,
     imageUrl: "../images/blog-1.png",
-    blogTitle: "Set Up and Optimize Google Business Profile (GBP)",
+    blogTitle: "2. Set Up and Optimize Google Business Profile (GBP)",
     subTitle1: "Why it matters",
     des1: " Most clients type “interior designer near me”—and Google shows your GBP, not your website.",
     subTitle2: "Checklist",
@@ -40,15 +40,15 @@ const Blog = [
   {
     id: 3,
     imageUrl: "../images/blog-1.png",
-    blogTitle: "SEO That Actually Brings You Leads",
+    blogTitle: "3. SEO That Actually Brings You Leads",
     subTitle1: "Why it matters",
     des1: "  Organic traffic brings people actively looking for your service.",
     subTitle2: "Checklist",
     des2: [
       "Target keywords like",
-      "Home interior designer in [City]",
+    { submenu:[ "Home interior designer in [City]",
       "Modular kitchen interior Chennai",
-      "2BHK interior cost [City]",
+      "2BHK interior cost [City]"]},
       "Create location pages",
       "Add blog posts (e.g., “Top 5 Interior Trends in Chennai 2025”)",
       "Optimize metadata and image ALT tags",
@@ -59,9 +59,9 @@ const Blog = [
   {
     id: 4,
     imageUrl: "../images/blog-1.png",
-    blogTitle: "Run Hyper-Targeted Google Ads",
+    blogTitle: "4. Run Hyper-Targeted Google Ads",
     subTitle1: "Why it matters",
-    des1: "When someone searches for “interior designer for new home,” they’re ready to buy.",
+    des1: "When someone searches for “interior designer for new home,” they're ready to buy.",
     subTitle2: "Checklist",
     des2: [
       "Use intent-based keywords",
@@ -77,7 +77,7 @@ const Blog = [
   {
     id: 5,
     imageUrl: "../images/blog-1.png",
-    blogTitle: "Create Engaging Instagram + Facebook Content",
+    blogTitle: "5. Create Engaging Instagram + Facebook Content",
     subTitle1: "Why it matters",
     des1: " People love visuals. Instagram is where homeowners browse before choosing a designer.",
     subTitle2: "Content Plan",
@@ -93,61 +93,131 @@ const Blog = [
     subTitle4: "Realistic Result",
     des4: " A Coimbatore-based designer gained 5,000 followers organically in 3 months and closed 2 projects directly from Instagram DMs.",
   },
+  {
+    id: 6,
+    imageUrl: "../images/blog-1.png",
+    blogTitle: " 6. Build a Lead Funnel with WhatsApp & Email Automation",
+    subTitle1: "Why it matters",
+    des1: "Not everyone who visits your website or watches your reels is ready to book now. But you can stay top of mind.",
+    subTitle2: "Checklist",
+    des2: [
+      "Use WhatsApp API or tools like WA Team Inbox",
+      "Capture leads with a freebie (e.g., “Free 10 Interior Design Tips PDF”)",
+      "Send weekly broadcast messages: project updates, offers, testimonials",
+      "Monthly newsletter via Mailchimp or ConvertKit",
+    ],
+    
+    subTitle4: "Realistic Result",
+    des4: "  A Mumbai-based designer nurtured 60+ cold leads and closed 4 projects in 6 months—all via regular WhatsApp follow-ups.",
+  },
+  {
+    id: 7,
+    imageUrl: "../images/blog-1.png",
+    blogTitle: "7. Run Location-Based Meta Ads (Facebook & Instagram)",
+    subTitle1: "Why it matters",
+    des1: " 7. Run Location-Based Meta Ads (Facebook & Instagram)",
+    subTitle2: "Ad Ideas",
+    des2: [
+      "Home Makeover Offer - Limited Slots This Month",
+      "See Our Latest 2BHK Project - Swipe to Explore",
+      "Carousel of project images with strong CTA",
+      "Use Lead Form objective",
+    ],
+    subTitle3: "Budget Tip",
+    des3: " Start with ₹300/day, target people aged 28–50 in specific high-income localities.",
+    subTitle4: "Realistic Result",
+    des4: "  A Pune designer generated 170+ leads in 25 days with a ₹10,000 Meta ad spend.",
+  },
+    {
+    id: 8,
+    imageUrl: "../images/blog-1.png",
+    blogTitle: " 8. Ask for and Display Client Reviews",
+    subTitle1: "Why it matters",
+    des1: "  90% of homeowners check Google reviews before choosing a service provider.",
+    subTitle2: "Checklist",
+    des2: [
+      "After every project, ask: “Would you mind writing us a quick Google review?”",
+      "Offer a small thank-you gift (optional)",
+      "Display reviews on website & Instagram Stories Highlights",
+    ],
+    subTitle3: "Pro Tip",
+    des3: " Video testimonials > written ones.",
+    subTitle4: "Realistic Result",
+    des4: "  A designer with 50+ reviews ranked higher locally and received 3X more direct calls compared to a competitor with 5 reviews.",
+  },
+  {
+    id: 9,
+    imageUrl: "../images/blog-1.png",
+    blogTitle: "9. Track, Analyze & Improve",
+    subTitle1: "Why it matters",
+    des1: "  You can't improve what you don't track.",
+    subTitle2: "Tools to Use",
+    des2: [
+      "Use UTM links to track campaign sources",
+      "WhatsApp Broadcast CTR",
+      "Google My Business Insights",
+      "WhatsApp Broadcast CTR",
+      "Use UTM links to track campaign sources",
+    ],
+    subTitle4: "Realistic Result",
+    des4: "  After reviewing insights, a designer shifted ad focus from general branding to lead generation and doubled inquiries.",
+  },
+  {
+    id: 10,
+    imageUrl: "../images/blog-1.png",
+    blogTitle: " 10. Collaborate with Local Influencers & Vendors",
+    subTitle1: "Why it matters",
+    des1: " In 2025, collaboration = credibility + reach.",
+    subTitle2: "Ideas:",
+    des2: [
+      "Partner with home décor influencers for reels",
+      "Cross-promote with architects, builders, or furniture brands",
+      "Do “reels collabs” or giveaways (e.g., “Win a FREE design consultation”)",
+    ],
+    subTitle4: "Realistic Result",
+    des4: "  A Kochi designer collaborated with a home influencer and gained 300+ followers + 12 consultation requests in a week.",
+  },
 ];
 
-// -------- Blog Listing Page --------
-const blogbox = document.querySelector(".blog-boxes");
-if (blogbox) {
-  Blog.forEach((e, i) => {
-    blogbox.innerHTML += `
-      <div class="blog-box" style="flex-direction: ${
-        i % 2 === 1 ? "row-reverse" : "row"
-      }">
-        <div class="blog-img">
-          <img src="${e.imageUrl}" alt="Blog image" />
-        </div>
-        <div class="blog-text">
-          <div class="text">
-            <h3>${e.blogTitle}</h3>
-            <div class="inner-text">
-              <h5>${e.subTitle1}</h5>
-              <p>${e.des1}</p>
-            </div>
-          </div>
-          <div class="blog-btn">
-            <a href="../page/services/blogDetial.html?id=${
-              e.id
-            }" class="btn">Read More</a>
-          </div>
-        </div>
-      </div>
-    `;
-  });
-}
 
 // -------- Blog Detail Page --------
-const containers = document.querySelector(".blog-det-container");
-if (containers) {
-  const urlParams = new URLSearchParams(window.location.search);
-  const blogId = parseInt(urlParams.get("id"));
+const containers = document.querySelector(".blog-section");
+const indexBOX = document.querySelector(".inner-indec-box");
 
-  const selectedBlog = Blog.find((b) => b.id === blogId);
+Blog.map((e)=>(
 
-  if (selectedBlog) {
-    containers.innerHTML = `
-      <h1>${selectedBlog.blogTitle}</h1>
-      <h3>${selectedBlog.subTitle1}</h3>
-      <p>${selectedBlog.des1}</p>
-      <h3>${selectedBlog.subTitle2}</h3>
-      <ul>
-        ${selectedBlog.des2.map((item) => `<li>${item}</li>`).join("")}
-      </ul>
-      <h3>${selectedBlog.subTitle3}</h3>
-      <p>${selectedBlog.des3}</p>
-      <h3>${selectedBlog.subTitle4}</h3>
-      <p>${selectedBlog.des4}</p>
-    `;
-  } else {
-    containers.innerHTML = `<p>Blog not found.</p>`;
-  }
-}
+     containers.innerHTML += `
+    <div class="blog-card" id="${e.id}">
+      <h4>${e.blogTitle}</h4>
+      ${e.subTitle1 ? `<h5>${e.subTitle1}</h5>` : ""}
+      ${e.des1 ? `<p>${e.des1}</p>` : ""}
+      ${e.subTitle2 ? `<h5>${e.subTitle2}</h5>` : ""}
+      ${Array.isArray(e.des2) ? `<ul>
+        ${e.des2
+          .map((item) => {
+            if (typeof item === "string") {
+              return `<li>${item}</li>`;
+            } else if (item.submenu && Array.isArray(item.submenu)) {
+              return `
+                
+                <ul>${item.submenu.map((sub) => `<li>${sub}</li>`).join("")}</ul>
+              `;
+            }
+            return "";
+          })
+          .join("")}
+      </ul>` : ""}
+      ${e.subTitle3 ? `<h5>${e.subTitle3}</h5>` : ""}
+      ${e.des3 ? `<p>${e.des3}</p>` : ""}
+      ${e.subTitle4 ? `<h5>${e.subTitle4}</h5>` : ""}
+      ${e.des4 ? `<p>${e.des4}</p>` : ""}
+    </div>
+  `
+))
+
+Blog.map((e)=>(
+indexBOX.innerHTML += `
+              <a href="#${e.id }">${e.blogTitle}</a>
+
+`
+))

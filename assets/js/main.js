@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
+
   // FAQ Toggle
   window.toggleFAQ = function (clickedQuestion) {
     const allAnswers = document.querySelectorAll(".faq .answer");
@@ -369,3 +370,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+// 
+const newsBox = document.querySelector(".news");
+const footer = document.querySelector("footer");
+
+function checkStickyStop() {
+  const footerTop = footer.getBoundingClientRect().top;
+  const newsHeight = newsBox.offsetHeight;
+
+  if (footerTop <= newsHeight + 150) {
+    newsBox.style.position = "absolute";
+    newsBox.style.top = `${footer.offsetTop - newsHeight - 150}px`;
+  } else {
+    newsBox.style.position = "sticky";
+    newsBox.style.top = "150px";
+  }
+}
+
+window.addEventListener("scroll", checkStickyStop);
+window.addEventListener("resize", checkStickyStop);
+
+
+  function showSocial() {
+    const social = document.querySelector('.float-social');
+    social.classList.toggle("show-social")
+  }
