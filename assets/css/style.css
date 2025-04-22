@@ -94,6 +94,7 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 90%;
 }
 .logo img {
   width: 150px;
@@ -101,7 +102,7 @@ header .container {
 nav {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 nav a {
   width: 100%;
@@ -110,6 +111,37 @@ nav a {
   align-items: center;
   gap: 5px;
   height: 100%;
+  position: relative;
+}
+nav a::before {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: var(--med-red-color);
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  transition: all 0.4s ease-in-out;
+  border-radius: 50px;
+}
+nav a:hover::before {
+  width: 80%;
+  transition: all 0.4s ease-in-out;
+}
+.med-con {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font-size: 11px;
+  text-align: center;
+  border: 2px solid var(--med-red-color);
+  border-radius: 7px;
+  padding: 4px;
+  color: var(--white-color);
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.167);
+  opacity: 0.7;
 }
 .btn {
   width: fit-content;
@@ -138,8 +170,8 @@ nav .service-menu a:focus + .sub-service,
 }
 .service-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  height: 150px;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
 }
 .service-menu-text {
   display: flex;
@@ -147,13 +179,10 @@ nav .service-menu a:focus + .sub-service,
   cursor: pointer;
 }
 .service-list .list {
-  height: 100%;
   color: var(--white-color);
   text-align: center;
   display: flex;
-  justify-content: center;
   font-size: 18px;
-  padding: 20px;
   align-items: center;
   flex-direction: column;
   gap: 10px;
@@ -162,14 +191,35 @@ nav .service-menu a:focus + .sub-service,
 .service-list li {
   border: 0.5px solid rgba(255, 255, 255, 0.511);
   border-right: none;
+  display: flex;
+  flex-direction: column;
+}
+.service-list li h5 {
+  font-size: 17px;
+  padding-left: 30px;
+  margin: 10px 0px;
+}
+.service-list li a {
+  padding: 5px 0px;
+  padding-left: 30px;
+  font-size: 16px;
+  width: 100%;
+  height: fit-content;
+}
+.service-list li a::before {
+  background-color: transparent;
+}
+.service-list li a:hover {
+  font-size: 17px;
 }
 .service-list li:first-child {
   border-left: none;
 }
 .service-list li i {
-  font-size: 24px;
+  font-size: 16px;
   color: var(--med-red-color);
 }
+
 /* ==========================================mobile nav */
 .mobile-menu {
   width: 75%;
@@ -177,7 +227,6 @@ nav .service-menu a:focus + .sub-service,
   justify-content: space-between;
   padding: 20px;
   height: 100%;
-  gap: 160px;
   flex-direction: column;
   color: var(--white-color);
   background: var(--red-and-black);
@@ -1187,102 +1236,98 @@ input {
   font-size: 16px;
   background-color: var(--med-red-color);
 }
-.blog-det-container{
+.blog-det-container {
   padding: 40px 0px;
 }
-.blog-det-container h2{
-color: var(--red-color);
-margin-bottom: 20px;
-font-weight: 800;
+.blog-det-container h2 {
+  color: var(--red-color);
+  margin-bottom: 20px;
+  font-weight: 800;
 }
-.blog-det-container h4{
+.blog-det-container h4 {
   color: var(--med-red-color);
   margin-bottom: 15px;
   font-weight: 700;
 }
-.blog-det-container h5{
+.blog-det-container h5 {
   font-size: 18px;
   margin-bottom: 10px;
-
 }
-.blog-det-container p{
+.blog-det-container p {
   margin-bottom: 15px;
   color: var(--black-color);
 }
-.blog-content{
+.blog-content {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
 }
-.blog-card{
+.blog-card {
   padding: 15px 0px;
 }
-.blog-form{
+.blog-form {
   width: 70%;
   margin: auto;
   height: 100%;
   position: relative;
-
 }
-.news{
+.news {
   position: sticky;
-   top: 150px;
-   width: 100%;
-   height: fit-content;
-   background-color: var(--light-red-color);
-   border-radius: 20px;
-   border: 2px solid var(--red-color);
-   padding: 20px;
-   display: flex;
-   
-   flex-direction: column;
+  top: 150px;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--light-red-color);
+  border-radius: 20px;
+  border: 2px solid var(--red-color);
+  padding: 20px;
+  display: flex;
+
+  flex-direction: column;
 }
-.news h3{
+.news h3 {
   color: var(--red-color);
 }
-.news h5{
+.news h5 {
   margin-bottom: 15px;
   font-size: 18px;
   color: var(--med-red-color);
 }
-.news p{
+.news p {
   font-size: 14px;
   margin-bottom: 10px;
 }
-.news .btn{
+.news .btn {
   margin: 10px auto;
 }
-.blog-section p{
+.blog-section p {
   font-size: 16px;
 }
-.blog-section ul{
+.blog-section ul {
   padding-left: 40px;
   margin-bottom: 20px;
   margin-top: 10px;
 }
-.blog-section ul li{
+.blog-section ul li {
   list-style: decimal;
   padding-left: 10px;
   margin-bottom: 10px;
 }
-.inner-indec-box{
+.inner-indec-box {
   display: flex;
   flex-direction: column;
- 
 }
-.inner-indec-box a{
+.inner-indec-box a {
   color: var(--black-color);
-   background-color: var(--light-red-color);
+  background-color: var(--light-red-color);
   border-left: 4px solid var(--light-red-color);
 
   padding: 10px 25px;
   margin-bottom: 20px;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
-.inner-indec-box a:hover{
+.inner-indec-box a:hover {
   background-color: var(--med-red-color);
   border-left: 4px solid var(--black-color);
-  transition: all .4s ease-in-out;
-
+  transition: all 0.4s ease-in-out;
 }
 /* ==========================================Other pages */
 /* ==========================================MEDIA QUERY */
@@ -1689,6 +1734,9 @@ font-weight: 800;
   .service-boxes {
     grid-template-columns: repeat(2, 1fr);
   }
+  header .btn {
+    display: none;
+  }
 }
 /* laptop */
 /* desktop */
@@ -1697,9 +1745,16 @@ font-weight: 800;
     width: 100%;
     padding: 40px;
   }
+  header .container {
+    width: 100%;
+    padding: 20px;
+  }
   .service-boxes {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+  }
+  header .btn {
+    display: none;
   }
 }
 /* desktop */

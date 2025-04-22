@@ -1,229 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/d-growlogo.png" />
+    <title>D-Grow</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/style.css" />
+    <!-- font - icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="../images/d-growlogo.png" />
-  <title>D-Grow</title>
-  <!-- css -->
-  <link rel="stylesheet" href="../../css/style.css" />
-  <!-- font - icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
-  <!-- ==============================HEADER ============================ -->
-  <header>
-    <div class="container">
-      <div class="logo">
-        <img src="../../images/d-growlogo.png" alt="" />
-      </div>
-      <nav>
-        <a href="../../../index.html">Home</a>
-        <a href="../about.html">About</a>
-        <div class="service-menu">
-          <a class="service-menu-text"onclick="window.open('./services/service.html', '_self')">Services <i class="fa-solid fa-caret-down"></i>
-          </a>
-
-          <div class="sub-service">
-            <ul class="service-list">
-              <li>
-                <a class="list" href="./seo.html">
-                  <i class="fa-brands fa-digital-ocean"></i>
-                  SEO
-                </a>
-              </li>
-              <li>
-                <a class="list" href="./socialmedia.html">
-                  <i class="fa-solid fa-comments-dollar"></i>
-                  Social Media Marketing + Management
-                </a>
-              </li>
-              <li>
-                <a class="list" href="#">
-                  <i class="fa-solid fa-note-sticky"></i>
-                  Lead Generate
-                </a>
-              </li>
-              <li>
-                <a class="list" href="#">
-                  <i class="fa-solid fa-earth-americas"></i> Web Designing &
-                  Development
-                </a>
-              </li>
-              <li>
-                <a class="list" href="#">
-                  <i class="fa-solid fa-web-awesome"></i> Personal Branding
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <a href="../blog.html">Blog</a>
-        <a href="../contact.html">Contact</a>
-      </nav>
-      <div class="btn">Med Grow</div>
-      <div onclick="showMenu()" class="menu-bar">
-        <div class="open">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="close">
-          <i class="fa-solid fa-x"></i>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- ==============================MOBILE MENU ============================ -->
-  <div class="mobile-menu">
-    <nav>
-      <a href="../../../index.html"><i class="fa-solid fa-house"></i>Home</a>
-      <a href="../about.html"><i class="fa-solid fa-address-card"></i>About</a>
-      <div class="mobile-service">
-        <a class="service-menu-text"onclick="window.open('./services/service.html', '_self')"><i class="fa-brands fa-digital-ocean"></i>Services</a>
-        <div class="mobile-sub-menu">
-          <a href="#"><i class="fa-solid fa-angles-right"></i>SEO</a>
-          <a href="#"><i class="fa-solid fa-angles-right"></i>Social Media Marketing
-          </a>
-          <a href="#"><i class="fa-solid fa-angles-right"></i>Lead Generate
-          </a>
-          <a href="#"><i class="fa-solid fa-angles-right"></i>Web Designing &
-            Development</a>
-          <a href="#"><i class="fa-solid fa-angles-right"></i>Personal Branding</a>
-        </div>
-      </div>
-      <a href="../blog.html"><i class="fa-solid fa-book"></i>Blog</a>
-      <a href="../contact.html"><i class="fa-solid fa-phone-volume"></i>Contact</a>
-    </nav>
-    <div class="mobile-social">
-      <i class="fa-brands fa-whatsapp"></i>
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-solid fa-envelope"></i>
-      <i class="fa-solid fa-phone"></i>
-    </div>
-  </div>
-  <!-- ==============================MOBILE MENU ============================ -->
-  <!-- ==============================HEADER ============================ -->
-  <!-- ==============================PAGE TOP SECTION ============================ -->
-
-  <div class="hero-section">
-    <div class="container">
-      <h1>Blog</h1>
-      <p>
-        <a class="inner-menu" href="../../../index.html">Home <i class="fa-solid fa-angle-right"></i></a>
-        <a href="#">Blog </a>
-      </p>
-    </div>
-  </div>
-
-  <!-- ==============================PAGE TOP SECTION ============================ -->
-  <div class="about blog-container">
-    <!-- ==============================Blog container============================ -->
-    <div class="container blog-content">
-      <div class="blog-det-container">
-        <h2>Digital Marketing Checklist Every Interior Designer Should Follow in 2025</h2>
-        <p>As a digital marketer with 5+ years of experience and an agency owner working with creative professionals,
-          I've seen a common trend—most interior designers are amazing at designing spaces but often struggle to get
-          consistent clients online. </p>
-        <p>
-          In 2025, if you're still depending only on word-of-mouth or occasional Instagram posts, you're leaving money
-          on the table.</p>
-        <p>
-          So I've created a realistic, results-driven digital marketing checklist tailored just for interior designers
-          to help you turn your online presence into a consistent client-generating machine.
-        </p>
-
-        <div class="index-blog">
-          <div class="index-box">
-            <p class="inner-indec-box">
-            </p>
-          </div>
-        </div>
-
-        <div class="">
-          <div class="blog-section">
-         
-          </div>
-        </div>
-      </div>
-      <div class="blog-form">
-        <div class="news">
-          <h3>What's new?</h3>
-          <h5>Subscribe to our newsletter</h5>
-          <p>Subscribing to our newsletter can get you to the brighter side of the business. We provide content that
-            keeps you motivated to a standstill by inserting the knowledge of digital marketing with the perfect plan.
-          </p>
-          <form action="">
-            <div class="email">
-              <label for="Yourname">Your name</label>
-              <input type="text" name="Yourname" id="Yourname">
-            </div>
-            <div class="email">
-              <label for="Youremail">Your email</label>
-              <input type="email" name="Youremail" id="Youremail">
-            </div>
-            <button class="btn">SUbmit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <!-- ==============================Blog container============================ -->
-     
-     
-    <!-- ==============================FOOTER============================ -->
-    <footer>
+  <body>
+    <!-- ==============================HEADER ============================ -->
+    <header>
       <div class="container">
-        <div class="footer-box">
-          <a href="../../index.html">Home </a>
-          <a href="../page/about.html">About Us </a>
-          <a href="#">Services </a>
-          <a href="#">SEO Service </a>
-          <a href="#">Social Media Marketing </a>
-          <a href="../page/contact.html">Contact Us</a>
-          <div class="social-icon">
-            <a href="#"></a>
+        <div class="logo">
+          <img src="../../images/d-growlogo.png" alt="" />
+        </div>
+        <nav>
+          <a href="../../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <div class="service-menu">
+            <a
+              class="service-menu-text"
+              onclick="window.open('../services/service.html', '_self')"
+              >Services
+              <i class="fa-solid fa-caret-down"></i>
+            </a>
+
+            <div class="sub-service">
+              <ul class="service-list">
+                <li>
+                  <h5>Digital Marketing Services</h5>
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>SEO Service (Website
+                    Ranking)</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Google Ads (PPC)</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Social Media
+                    Marketing</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Social Media
+                    Management</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Email Marketing</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>GMB Listing &
+                    Ranking</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>WhatsApp
+                    Marketing</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Leads Generation</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Political Ads</a
+                  >
+                </li>
+                <li>
+                  <h5>Creative Services</h5>
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Content Writing &
+                    Marketing</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Graphic Designing</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Video Shooting &
+                    Editing</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Personal Branding</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>LinkedIn Personal
+                    Branding</a
+                  >
+                </li>
+                <li>
+                  <h5>Business Solutions & E-Commerce</h5>
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Website Design &
+                    Development</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Marketing
+                    Automation</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Lead Nurturing
+                    System</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Digital Marketing
+                    Consultation</a
+                  >
+                  <a href="../services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Product Listing +
+                    Amazon SEO</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a href="#">Digital<span></span>Consultation</a>
+          <a href="#"
+            >Med<span></span>Grow
+            <div class="med-con">
+              Coming Soon <br />
+              for medical
+            </div></a
+          >
+          <a href="../blog.html">Blog</a>
+          <a href="#">Case<span></span>Study</a>
+          <a href="../contact.html">Contact</a>
+        </nav>
+        <a class="btn" href="#">Start Now</a>
+        <div onclick="showMenu()" class="menu-bar">
+          <div class="open">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="close">
+            <i class="fa-solid fa-x"></i>
           </div>
         </div>
-        <div class="footer-box address">
-          <img src="../../images/d-grow-footer.png" alt="" />
+      </div>
+    </header>
+    <!-- ==============================MOBILE MENU ============================ -->
+    <div class="mobile-menu">
+      <nav>
+        <a href="../../../index.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="../about.html"
+          ><i class="fa-solid fa-address-card"></i>About</a
+        >
+        <div class="mobile-service">
+          <a href="../services/service.html"
+            ><i class="fa-brands fa-digital-ocean"></i>Services</a
+          >
+          <div class="mobile-sub-menu">
+            <a href="../services/seo.html"
+              ><i class="fa-solid fa-angles-right"></i>SEO</a
+            >
+            <a href="../services/socialmedia.html"
+              ><i class="fa-solid fa-angles-right"></i>Social Media Marketing
+            </a>
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Lead Generate
+            </a>
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Web Designing &
+              Development</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Personal Branding</a
+            >
+          </div>
+        </div>
+        <a href="#"><i class="fa-solid fa-book"></i>Digital consultants</a>
+        <a href="#"><i class="fa-solid fa-book"></i>Med Grow</a>
+
+        <a href="../blog.html"><i class="fa-solid fa-book"></i>Blog</a>
+        <a href="#"><i class="fa-solid fa-book"></i>Case Study</a>
+
+        <a href="../contact.html"
+          ><i class="fa-solid fa-phone-volume"></i>Contact</a
+        >
+      </nav>
+      <div class="mobile-social">
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-solid fa-phone"></i>
+      </div>
+    </div>
+    <!-- ==============================MOBILE MENU ============================ -->
+    <!-- ==============================HEADER ============================ -->
+    <!-- ==============================PAGE TOP SECTION ============================ -->
+
+    <div class="hero-section">
+      <div class="container">
+        <h1>Blog</h1>
+        <p>
+          <a class="inner-menu" href="../../../index.html"
+            >Home <i class="fa-solid fa-angle-right"></i
+          ></a>
+          <a href="#">Blog </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- ==============================PAGE TOP SECTION ============================ -->
+    <div class="about blog-container">
+      <!-- ==============================Blog container============================ -->
+      <div class="container blog-content">
+        <div class="blog-det-container">
+          <h2>
+            Digital Marketing Checklist Every Interior Designer Should Follow in
+            2025
+          </h2>
           <p>
-            Plot No. 141, SF No: 14/3 Radha Avenue Main Road, Valasaravakkam,
-            Chennai - 600087
+            As a digital marketer with 5+ years of experience and an agency
+            owner working with creative professionals, I've seen a common
+            trend—most interior designers are amazing at designing spaces but
+            often struggle to get consistent clients online.
           </p>
-          <a href="#">+91 7373509585</a>
-          <a href="#"> enquiry@dgrowmarketing.com</a>
+          <p>
+            In 2025, if you're still depending only on word-of-mouth or
+            occasional Instagram posts, you're leaving money on the table.
+          </p>
+          <p>
+            So I've created a realistic, results-driven digital marketing
+            checklist tailored just for interior designers to help you turn your
+            online presence into a consistent client-generating machine.
+          </p>
+
+          <div class="index-blog">
+            <div class="index-box">
+              <p class="inner-indec-box"></p>
+            </div>
+          </div>
+
+          <div class="">
+            <div class="blog-section"></div>
+          </div>
+        </div>
+        <div class="blog-form">
+          <div class="news">
+            <h3>What's new?</h3>
+            <h5>Subscribe to our newsletter</h5>
+            <p>
+              Subscribing to our newsletter can get you to the brighter side of
+              the business. We provide content that keeps you motivated to a
+              standstill by inserting the knowledge of digital marketing with
+              the perfect plan.
+            </p>
+            <form action="">
+              <div class="email">
+                <label for="Yourname">Your name</label>
+                <input type="text" name="Yourname" id="Yourname" />
+              </div>
+              <div class="email">
+                <label for="Youremail">Your email</label>
+                <input type="email" name="Youremail" id="Youremail" />
+              </div>
+              <button class="btn">SUbmit</button>
+            </form>
+          </div>
         </div>
       </div>
-      <hr />
-      <a href="">
-        <p class="copy">Copyright © 2024 D-Grow Marketing Agency</p>
-      </a>
+      <!-- ==============================Blog container============================ -->
 
+      <!-- ==============================FOOTER============================ -->
+      <footer>
+        <div class="container">
+          <div class="footer-box">
+            <a href="../../index.html">Home </a>
+            <a href="../page/about.html">About Us </a>
+            <a href="#">Services </a>
+            <a href="#">SEO Service </a>
+            <a href="#">Social Media Marketing </a>
+            <a href="../page/contact.html">Contact Us</a>
+            <div class="social-icon">
+              <a href="#"></a>
+            </div>
+          </div>
+          <div class="footer-box address">
+            <img src="../../images/d-grow-footer.png" alt="" />
+            <p>
+              Plot No. 141, SF No: 14/3 Radha Avenue Main Road, Valasaravakkam,
+              Chennai - 600087
+            </p>
+            <a href="#">+91 7373509585</a>
+            <a href="#"> enquiry@dgrowmarketing.com</a>
+          </div>
+        </div>
+        <hr />
+        <a href="">
+          <p class="copy">Copyright © 2024 D-Grow Marketing Agency</p>
+        </a>
+      </footer>
+      <!-- ==============================FOOTER============================ -->
+      <!-- ==============================Float menu============================ -->
+      <button id="scrollToTop">
+        <a class="bg-icon" onclick="showSocial()" title="Social Media"
+          ><i class="fa-solid fa-share-alt"></i
+        ></a>
+        <a class="bg-icon" href="#" title="Go to top"
+          ><i class="fa-solid fa-arrow-up"></i
+        ></a>
 
-    </footer>
-    <!-- ==============================FOOTER============================ -->
-    <!-- ==============================Float menu============================ -->
-    <button id="scrollToTop">
-      <a class="bg-icon" onclick="showSocial()" title="Social Media"><i class="fa-solid fa-share-alt"></i></a>
-      <a class="bg-icon" href="#" title="Go to top"><i class="fa-solid fa-arrow-up"></i></a>
+        <div class="float-social">
+          <a class="whatsapp" href="" title="WhatsApp"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a class="insta" href="" title="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a class="env" href="" title="Email Me"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+          <a class="phone" href="" title="Contact "
+            ><i class="fa-solid fa-phone"></i
+          ></a>
+        </div>
+      </button>
+    </div>
+    <!-- js -->
 
-      <div class="float-social">
-        <a class="whatsapp" href="" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a class="insta" href="" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a class="env" href="" title="Email Me"><i class="fa-solid fa-envelope"></i></a>
-        <a class="phone" href="" title="Contact "><i class="fa-solid fa-phone"></i></a>
-      </div>
-    </button>
-
-  </div>
-  <!-- js -->
-
-  <script src="../../js/main.js "></script>
-  <script src="../../js/blog.js "></script>
-
-
-</body>
-
+    <script src="../../js/main.js "></script>
+    <script src="../../js/blog.js "></script>
+  </body>
 </html>
