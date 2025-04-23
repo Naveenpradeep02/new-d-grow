@@ -260,38 +260,36 @@
                 <input type="text" name="link" id="link" required />
               </div>
               <label class="label-style bold-lable"
-                >Which Service Are You Looking For?</label
-              >
+                >Which Service Are You Looking For?
+                <div class="dropdown" style="position: relative">
+                  <a
+                    href="javascript:void(0)"
+                    onclick="toggleDropdown()"
+                    class="input-style"
+                  >
+                    Select Services ▼
+                  </a>
+                  <div
+                    class="dropdown-menu"
+                    style="
+                      display: none;
+                      position: absolute;
+                      z-index: 10;
+                      background: white;
+                      border: 1px solid #ccc;
+                      max-height: 200px;
+                      overflow-y: auto;
+                      width: 100%;
+                      margin-top: 5px;
+                    "
+                  >
+                    <div id="dropdown-options"></div>
+                  </div></div
+              ></label>
               <div id="selected-options" class="selected-options">
                 <span>No services selected</span>
               </div>
               <input type="hidden" name="services" id="servicesInput" />
-
-              <div class="dropdown" style="position: relative">
-                <a
-                  href="javascript:void(0)"
-                  onclick="toggleDropdown()"
-                  class="input-style"
-                >
-                  Select Services ▼
-                </a>
-                <div
-                  class="dropdown-menu"
-                  style="
-                    display: none;
-                    position: absolute;
-                    z-index: 10;
-                    background: white;
-                    border: 1px solid #ccc;
-                    max-height: 200px;
-                    overflow-y: auto;
-                    width: 100%;
-                    margin-top: 5px;
-                  "
-                >
-                  <div id="dropdown-options"></div>
-                </div>
-              </div>
 
               <div class="emails">
                 <label class="bold-lable">Your Marketing Budget?</label>
@@ -300,42 +298,48 @@
                     <div
                       class="border rounded p-2 flex items-center gap-2 budget-div"
                     >
-                      <span class="hidden">✔</span>
+                      <span class="hidden tick">✔</span>
+                      <div class="ckeck"></div>
+
                       <input
                         type="radio"
                         class="budget-checkbox hidden"
                         name="budget"
                         value="35000"
                       />
-                      <span>35k to 50k</span>
+                      <span class="ckeck-text">35k to 50k</span>
                     </div>
                   </label>
                   <label class="cursor-pointer">
                     <div
                       class="border rounded p-2 flex items-center gap-2 budget-div"
                     >
-                      <span class="hidden">✔</span>
+                      <span class="hidden tick">✔</span>
+                      <div class="ckeck"></div>
+
                       <input
                         type="radio"
                         class="budget-checkbox hidden"
                         name="budget"
                         value="75000"
                       />
-                      <span>50k to 1L</span>
+                      <span class="ckeck-text">50k to 1L</span>
                     </div>
                   </label>
                   <label class="cursor-pointer">
                     <div
                       class="border rounded p-2 flex items-center gap-2 budget-div"
                     >
-                      <span class="hidden">✔</span>
+                      <span class="hidden tick">✔</span>
+                      <div class="ckeck"></div>
+
                       <input
                         type="radio"
                         class="budget-checkbox hidden"
                         name="budget"
                         value="100000"
                       />
-                      <span>1L to 2L</span>
+                      <span class="ckeck-text">1L to 2L</span>
                     </div>
                   </label>
                 </div>

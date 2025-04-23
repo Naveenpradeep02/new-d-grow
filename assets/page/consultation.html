@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/d-growlogo.png" />
+    <title>D-Grow</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- font - icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- ==============================HEADER ============================ -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="../images/d-growlogo.png" alt="" />
+        </div>
+        <nav>
+          <a href="../../index.html">Home</a>
+          <a href="../page/about.html">About</a>
+          <div class="service-menu">
+            <a
+              class="service-menu-text"
+              onclick="window.open('../page/services/service.html', '_self')"
+              >Services
+              <i class="fa-solid fa-caret-down"></i>
+            </a>
+
+            <div class="sub-service">
+              <ul class="service-list">
+                <li>
+                  <h5>Digital Marketing Services</h5>
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>SEO Service (Website
+                    Ranking)</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Google Ads (PPC)</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Social Media
+                    Marketing</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Social Media
+                    Management</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Email Marketing</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>GMB Listing &
+                    Ranking</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>WhatsApp
+                    Marketing</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Leads Generation</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Political Ads</a
+                  >
+                </li>
+                <li>
+                  <h5>Creative Services</h5>
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Content Writing &
+                    Marketing</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Graphic Designing</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Video Shooting &
+                    Editing</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Personal Branding</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>LinkedIn Personal
+                    Branding</a
+                  >
+                </li>
+                <li>
+                  <h5>Business Solutions & E-Commerce</h5>
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Website Design &
+                    Development</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Marketing
+                    Automation</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Lead Nurturing
+                    System</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Digital Marketing
+                    Consultation</a
+                  >
+                  <a href="../page/services/seo.html"
+                    ><i class="fa-solid fa-angle-right"></i>Product Listing +
+                    Amazon SEO</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a href="#">Consultation</a>
+          <a href="#"
+            >Med<span></span>Grow
+            <div class="med-con">
+              Coming Soon <br />
+              for medical
+            </div></a
+          >
+          <a href="../page/blog.html">Blog</a>
+          <a href="#">Case<span></span>Study</a>
+          <a href="../page/contact.html">Contact</a>
+        </nav>
+        <a class="btn" href="#">Start Now</a>
+        <div onclick="showMenu()" class="menu-bar">
+          <div class="open">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="close">
+            <i class="fa-solid fa-x"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ==============================MOBILE MENU ============================ -->
+    <div class="mobile-menu">
+      <nav>
+        <a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="../page/about.html"
+          ><i class="fa-solid fa-address-card"></i>About</a
+        >
+        <div class="mobile-service">
+          <a href="../page/services/service.html"
+            ><i class="fa-brands fa-digital-ocean"></i>Services</a
+          >
+          <div class="mobile-sub-menu">
+            <a href="../page/services/seo.html"
+              ><i class="fa-solid fa-angles-right"></i>SEO</a
+            >
+            <a href="../page/services/socialmedia.html"
+              ><i class="fa-solid fa-angles-right"></i>Social Media Marketing
+            </a>
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Lead Generate
+            </a>
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Web Designing &
+              Development</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-angles-right"></i>Personal Branding</a
+            >
+          </div>
+        </div>
+        <a href="#"><i class="fa-solid fa-book"></i>Digital consultants</a>
+        <a href="#"><i class="fa-solid fa-book"></i>Med Grow</a>
+
+        <a href="../page/blog.html"><i class="fa-solid fa-book"></i>Blog</a>
+        <a href="#"><i class="fa-solid fa-book"></i>Case Study</a>
+
+        <a href="../page/contact.html"
+          ><i class="fa-solid fa-phone-volume"></i>Contact</a
+        >
+      </nav>
+      <div class="mobile-social">
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-solid fa-phone"></i>
+      </div>
+    </div>
+    <!-- ==============================MOBILE MENU ============================ -->
+    <!-- ==============================HEADER ============================ -->
+    <!-- ==============================PAGE TOP SECTION ============================ -->
+
+    <div class="hero-section">
+      <div class="container">
+        <h1>Digital Marketing Consultation</h1>
+        <p>
+          <a class="inner-menu" href="../../index.html"
+            >Home <i class="fa-solid fa-angle-right"></i
+          ></a>
+          <a href="#">Consultation</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- ==============================PAGE TOP SECTION ============================ -->
+    <div class="about">
+      <!-- ==============================SECTION 2 ============================ -->
+      <section class="section section2">
+        <div class="container">
+          <div class="right">
+            <div class="section-img">
+              <img src="../images/seo.png" alt="" />
+            </div>
+          </div>
+          <div class="left digital">
+            <div class="section-text">
+              <h3>Digital Marketing Consultation</h3>
+              <div class="text">
+                <h2>with Srija R</h2>
+                <h5>Certified Digital Strategist & Growth Consultant</h5>
+              </div>
+              <p class="qt-box">
+                <i class="fa-solid fa-quote-left"></i> Most business owners
+                today are doing everything right, but still getting nothing out
+                of their online presence. Confused? You're not alone.<i
+                  class="fa-solid fa-quote-right"
+                ></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==============================SECTION 2 ============================ -->
+      <!-- ==============================SECTION 3 ============================ -->
+      <section class="section section2 dig-sec2">
+        <div class="container">
+          <div class="left">
+            <div class="section-text sec3-digital">
+              <h3>
+                Why Your Business Isn't Growing Digitally (Even After Spending
+                Time & Money)
+              </h3>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-hand-point-right"></i>You've launched a
+                  website.
+                </li>
+                <li>
+                  <i class="fa-solid fa-hand-point-right"></i>You've posted on
+                  Instagram.
+                </li>
+                <li>
+                  <i class="fa-solid fa-hand-point-right"></i>
+                  Maybe even ran a few ads after watching a recorded webinar or
+                  YouTube tutorial.
+                </li>
+                <li><i class="fa-solid fa-hand-point-right"></i>And still…</li>
+              </ul>
+              <div class="no-box">
+                <div class="nolets">
+                  <strong>No leads <i class="fa-solid fa-question"></i></strong>
+                </div>
+                <div class="nolets">
+                  <strong>No sales <i class="fa-solid fa-question"></i></strong>
+                </div>
+                <div class="nolets">
+                  <strong
+                    >No clarity <i class="fa-solid fa-question"></i
+                  ></strong>
+                </div>
+              </div>
+              <div class="sec3-digital">
+                <div class="title-digital">
+                  <h2>Here's why</h2>
+                </div>
+                <p>
+                  You're copying strategies that aren't made for your business.
+                </p>
+                <p>You're being sold courses, not solutions.</p>
+                <p>You're missing a custom strategy built FOR YOU.</p>
+                <div class="nolets">
+                  <h5>
+                    That's where Srija R steps in — a trusted consultant for
+                    brands that want clarity, direction, and results.
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="section-img">
+              <img src="../images/banner.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==============================SECTION 3 ============================ -->
+      <!-- ==============================SECTION 4 ============================ -->
+      <section class="section section2">
+        <div class="container">
+          <div class="right">
+            <div class="section-img">
+              <img src="../images/seo.png" alt="" />
+            </div>
+          </div>
+          <div class="left digital">
+            <div class="section-text">
+              <h3>Who is Srija R?</h3>
+              <div class="text">
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-hand-point-right"></i>Google Certified
+                    Trainer
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-hand-point-right"></i>
+                    SEO & Digital Growth Strategist with 5+ years of experience
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-hand-point-right"></i>
+                    Founder of
+                    <a href="http://digitalSrija.com">DigitalSrija.com</a>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-hand-point-right"></i>
+                    Worked with 70+ brands across healthcare, retail, coaching,
+                    real estate, food, and D2C
+                  </li>
+                </ul>
+              </div>
+              <p class="qt-box">
+                <i class="fa-solid fa-angles-right"></i> Srija doesn't sell
+                generic growth formulas. She sits with you, understands your
+                business, and builds a digital growth map customized for your
+                goals. <br /><br /><i class="fa-solid fa-angles-right"></i>
+                Think of it like hiring a CMO on demand — minus the big salary.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==============================SECTION 4 ============================ -->
+      <!-- ==============================SECTION 5 ============================ -->
+      <section class="section3">
+        <div class="container">
+          <h2>What You'll Get in the Consultation</h2>
+          <h3></h3>
+          <p class="ptext"></p>
+
+          <div class="boxs">
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-wave-square"></i>
+                </div>
+                <h4>360° Digital Health Audit</h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  We review your current presence — website, SEO, content, ads,
+                  GMB, social media — and identify what's holding you back.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-users-gear"></i>
+                </div>
+                <h4>
+                  Competitor + Market <br />
+                  Gap Analysis
+                </h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  Find out what your competitors are doing, what's working for
+                  them, and what YOU should do differently.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <h4>Growth Blueprint</h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  A crystal-clear action plan — what platforms to use, what
+                  content to create, what budget to spend, and where.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-list-check"></i>
+                </div>
+                <h4>Lead Funnel Design</h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  Understand how to take strangers → followers → leads → buyers
+                  → repeat customers.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-swatchbook"></i>
+                </div>
+                <h4>Channel Selection <br />Strategy</h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  Where you should be — based on your industry (not trends).
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-tags"></i>
+                </div>
+                <h4>Budget Optimization Tips</h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  Cut down on wasteful spending, and start using ads and tools
+                  that deliver ROI.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-question"></i>
+                </div>
+                <h4>Q&A Support</h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  Ask your questions, get clarity — no fluff, only what matters
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==============================SECTION 5 ============================ -->
+      <!-- ==============================SECTION 6 ============================ -->
+      <section class="sec4-des">
+        <div class="container">
+          <h3>Before vs After: Why Brands Book a 1-on-1 Session</h3>
+          <div class="table">
+            <div class="table1">
+              <h4>Before Srija's Consultation</h4>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-angles-right"></i> Posting randomly on
+                  Instagram
+                </li>
+                <li>
+                  <i class="fa-solid fa-angles-right"></i> Running ads without
+                  strategy
+                </li>
+                <li>
+                  <i class="fa-solid fa-angles-right"></i> Website ranking on
+                  page 5 of Google
+                </li>
+                <li>
+                  <i class="fa-solid fa-angles-right"></i> No follow-up system
+                  after inquiries
+                </li>
+                <li>
+                  <i class="fa-solid fa-angles-right"></i> No idea how to scale
+                </li>
+              </ul>
+            </div>
+            <div class="table1 table2">
+              <h4>After Consultation with Srija R</h4>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-angles-right"></i> Clear content
+                  strategy + engagement growth
+                </li>
+                <li>
+                  <i class="fa-solid fa-angles-right"></i> Platform-specific ad
+                  funnel with conversions
+                </li>
+                <li>
+                  <i class="fa-solid fa-angles-right"></i> Ranking in top 3
+                  (within 100 days*)
+                </li>
+                <li>
+                  <i class="fa-solid fa-angles-right"></i> Implemented WhatsApp
+                  & Email drip nurturing
+                </li>
+                <li>
+                  <i class="fa-solid fa-angles-right"></i> Month-wise plan with
+                  realistic revenue goals
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==============================SECTION 6 ============================ -->
+      <!-- ==============================SECTION 7 ============================ -->
+      <section class="section3">
+        <div class="container">
+          <h2>What You'll Get in the Consultation</h2>
+          <h3></h3>
+          <p class="ptext"></p>
+
+          <div class="boxs">
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-wave-square"></i>
+                </div>
+                <h4>360° Digital Health Audit</h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  We review your current presence — website, SEO, content, ads,
+                  GMB, social media — and identify what's holding you back.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-users-gear"></i>
+                </div>
+                <h4>
+                  Competitor + Market <br />
+                  Gap Analysis
+                </h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  Find out what your competitors are doing, what's working for
+                  them, and what YOU should do differently.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <h4>Growth Blueprint</h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  A crystal-clear action plan — what platforms to use, what
+                  content to create, what budget to spend, and where.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-list-check"></i>
+                </div>
+                <h4>Lead Funnel Design</h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  Understand how to take strangers → followers → leads → buyers
+                  → repeat customers.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-swatchbook"></i>
+                </div>
+                <h4>Channel Selection <br />Strategy</h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  Where you should be — based on your industry (not trends).
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-tags"></i>
+                </div>
+                <h4>Budget Optimization Tips</h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  Cut down on wasteful spending, and start using ads and tools
+                  that deliver ROI.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box1">
+                <div class="icon">
+                  <i class="fa-solid fa-question"></i>
+                </div>
+                <h4>Q&A Support</h4>
+              </div>
+              <div class="box-text">
+                <p>
+                  Ask your questions, get clarity — no fluff, only what matters
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==============================SECTION 7 ============================ -->
+      <!-- ==============================WORK ============================ -->
+      <div class="work">
+        <div class="container">
+          <div class="left">
+            <div class="step-box">
+              <div class="step">
+                <div class="step-list">
+                  <div class="inner-box"></div>
+                </div>
+                <div class="step-text">
+                  <h3>Initial Intake & Business Diagnosis</h3>
+                  <p>
+                    We start by collecting insights through a detailed intake
+                    form — your business model, current marketing efforts,
+                    audience, and short-term + long-term goals.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-list">
+                  <div class="inner-box"></div>
+                </div>
+                <div class="step-text">
+                  <h3>Market & Competitor Research</h3>
+                  <p>
+                    Before the session, we perform a light audit of your market
+                    and top 3 competitors to identify missed opportunities and
+                    your true competitive edge.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-list">
+                  <div class="inner-box"></div>
+                </div>
+                <div class="step-text">
+                  <h3>Zoom Consultation with Srija R (60-90 Mins)</h3>
+                  <p>
+                    This is where we deep dive — reviewing your funnels,
+                    marketing gaps, audience psychology, and monetization
+                    potential. All insights are broken down in real time.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-list">
+                  <div class="inner-box"></div>
+                </div>
+                <div class="step-text">
+                  <h3>Live Funnel Mapping & Strategy Sketch</h3>
+                  <p>
+                    Together, we co-create a custom growth funnel. You'll see
+                    how your traffic will convert to leads, and leads into sales
+                    — with real examples and visual clarity.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-list">
+                  <div class="inner-box"></div>
+                </div>
+                <div class="step-text">
+                  <h3>Growth Blueprint & Action Plan</h3>
+                  <p>
+                    Within 48 hours, you'll receive a written roadmap covering
+                    content strategy, traffic channels, ad platforms, automation
+                    tools, and timeline to hit your goals.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-list">
+                  <div class="inner-box"></div>
+                </div>
+                <div class="step-text">
+                  <h3>Tool Stack & Resource Guidance</h3>
+                  <p>
+                    We help you avoid tool overwhelm by recommending only what
+                    you need — be it landing page builders, CRM, WhatsApp
+                    automation, or email systems.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-list">
+                  <div class="inner-box"></div>
+                </div>
+                <div class="step-text">
+                  <h3>Next Steps & Partnership Options</h3>
+                  <p>
+                    You'll get clarity on how to execute your plan: DIY with
+                    your team, plug into our D-Grow services, or continue with
+                    strategy sessions for monthly guidance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="">
+              <h2>How This Consultation Works</h2>
+              <h3>Simple 7-Step Success Roadmap</h3>
+              <p>
+                Our work process is designed to deliver results through a
+                structured and strategic approach. From understanding your
+                business goals to ongoing optimization, each step is tailored to
+                ensure maximum impact. Here's how we turn insights into action
+                and drive measurable growth for your brand.
+              </p>
+            </div>
+            <img src="./assets/images/hero.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- ==============================WORK ============================ -->
+      <!-- ==============================Section 12 ============================ -->
+      <section class="section section2">
+        <div class="container">
+          <div class="right">
+            <div class="section-img">
+              <img src="../images/seo.png" alt="" />
+            </div>
+          </div>
+          <div class="left digital">
+            <div class="section-text">
+              <h3>What's Next After the Consultation?</h3>
+              <div class="text">
+                <!-- <h2>with Srija R</h2> -->
+                <h5>
+                  The consultation isn't the end — it's the beginning of your
+                  digital transformation journey. Depending on your goals, you
+                  can
+                </h5>
+              </div>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  Hire the D-Grow team to execute the strategy (SEO, Ads, Social
+                  Media, etc.)
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>Get monthly strategy
+                  consulting & reporting support
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>Use the blueprint to
+                  train your internal team
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>Book an advanced
+                  follow-up session after implementation
+                </li>
+              </ul>
+              <p class="qt-box">
+                We don't believe in "one-size-fits-all". Your growth strategy is
+                100% tailored to your goals, your budget, your vision.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==============================Section 12 ============================ -->
+      <!-- ==============================FOOTER============================ -->
+      <footer>
+        <div class="container">
+          <div class="footer-box">
+            <a href="../../index.html">Home </a>
+            <a href="../page/about.html">About Us </a>
+            <a href="#">Services </a>
+            <a href="#">SEO Service </a>
+            <a href="#">Social Media Marketing </a>
+            <a href="../page/contact.html">Contact Us</a>
+            <div class="social-icon">
+              <a href="#"></a>
+            </div>
+          </div>
+          <div class="footer-box address">
+            <img src="../images/d-grow-footer.png" alt="" />
+            <p>
+              Plot No. 141, SF No: 14/3 Radha Avenue Main Road, Valasaravakkam,
+              Chennai - 600087
+            </p>
+            <a href="#">+91 7373509585</a>
+            <a href="#"> enquiry@dgrowmarketing.com</a>
+          </div>
+        </div>
+        <hr />
+        <a href="">
+          <p class="copy">Copyright © 2024 D-Grow Marketing Agency</p></a
+        >
+      </footer>
+      <!-- ==============================FOOTER============================ -->
+      <!-- ==============================Float menu============================ -->
+      <button id="scrollToTop">
+        <a class="bg-icon" onclick="showSocial()" title="Social Media"
+          ><i class="fa-solid fa-share-alt"></i
+        ></a>
+        <a class="bg-icon" href="#" title="Go to top"
+          ><i class="fa-solid fa-arrow-up"></i
+        ></a>
+
+        <div class="float-social">
+          <a class="whatsapp" href="" title="WhatsApp"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a class="insta" href="" title="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a class="env" href="" title="Email Me"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+          <a class="phone" href="" title="Contact "
+            ><i class="fa-solid fa-phone"></i
+          ></a>
+        </div>
+      </button>
+    </div>
+    <!-- type -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- js -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>

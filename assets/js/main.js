@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-
   // FAQ Toggle
   window.toggleFAQ = function (clickedQuestion) {
     const allAnswers = document.querySelectorAll(".faq .answer");
@@ -370,7 +369,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-// 
+//
 const newsBox = document.querySelector(".news");
 const footer = document.querySelector("footer");
 
@@ -390,8 +389,7 @@ function checkStickyStop() {
 window.addEventListener("scroll", checkStickyStop);
 window.addEventListener("resize", checkStickyStop);
 
-
-  function showSocial() {
-    const social = document.querySelector('.float-social');
-    social.classList.toggle("show-social")
-  }
+function showSocial() {
+  const social = document.querySelector(".float-social");
+  social.classList.toggle("show-social");
+}
