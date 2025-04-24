@@ -46,9 +46,13 @@ const Blog = [
     subTitle2: "Checklist",
     des2: [
       "Target keywords like",
-    { submenu:[ "Home interior designer in [City]",
-      "Modular kitchen interior Chennai",
-      "2BHK interior cost [City]"]},
+      {
+        submenu: [
+          "Home interior designer in [City]",
+          "Modular kitchen interior Chennai",
+          "2BHK interior cost [City]",
+        ],
+      },
       "Create location pages",
       "Add blog posts (e.g., “Top 5 Interior Trends in Chennai 2025”)",
       "Optimize metadata and image ALT tags",
@@ -106,7 +110,7 @@ const Blog = [
       "Send weekly broadcast messages: project updates, offers, testimonials",
       "Monthly newsletter via Mailchimp or ConvertKit",
     ],
-    
+
     subTitle4: "Realistic Result",
     des4: "  A Mumbai-based designer nurtured 60+ cold leads and closed 4 projects in 6 months—all via regular WhatsApp follow-ups.",
   },
@@ -128,7 +132,7 @@ const Blog = [
     subTitle4: "Realistic Result",
     des4: "  A Pune designer generated 170+ leads in 25 days with a ₹10,000 Meta ad spend.",
   },
-    {
+  {
     id: 8,
     imageUrl: "../images/blog-1.png",
     blogTitle: " 8. Ask for and Display Client Reviews",
@@ -179,20 +183,21 @@ const Blog = [
   },
 ];
 
-
 // -------- Blog Detail Page --------
 const containers = document.querySelector(".blog-section");
 const indexBOX = document.querySelector(".inner-indec-box");
 
-Blog.map((e)=>(
-
-     containers.innerHTML += `
+Blog.map(
+  (e) =>
+    (containers.innerHTML += `
     <div class="blog-card" id="${e.id}">
       <h4>${e.blogTitle}</h4>
       ${e.subTitle1 ? `<h5>${e.subTitle1}</h5>` : ""}
       ${e.des1 ? `<p>${e.des1}</p>` : ""}
       ${e.subTitle2 ? `<h5>${e.subTitle2}</h5>` : ""}
-      ${Array.isArray(e.des2) ? `<ul>
+      ${
+        Array.isArray(e.des2)
+          ? `<ul>
         ${e.des2
           .map((item) => {
             if (typeof item === "string") {
@@ -200,24 +205,29 @@ Blog.map((e)=>(
             } else if (item.submenu && Array.isArray(item.submenu)) {
               return `
                 
-                <ul>${item.submenu.map((sub) => `<li>${sub}</li>`).join("")}</ul>
+                <ul>${item.submenu
+                  .map((sub) => `<li>${sub}</li>`)
+                  .join("")}</ul>
               `;
             }
             return "";
           })
           .join("")}
-      </ul>` : ""}
+      </ul>`
+          : ""
+      }
       ${e.subTitle3 ? `<h5>${e.subTitle3}</h5>` : ""}
       ${e.des3 ? `<p>${e.des3}</p>` : ""}
       ${e.subTitle4 ? `<h5>${e.subTitle4}</h5>` : ""}
       ${e.des4 ? `<p>${e.des4}</p>` : ""}
     </div>
-  `
-))
+  `)
+);
 
-Blog.map((e)=>(
-indexBOX.innerHTML += `
-              <a href="#${e.id }">${e.blogTitle}</a>
+Blog.map(
+  (e) =>
+    (indexBOX.innerHTML += `
+              <a href="#${e.id}">${e.blogTitle}</a>
 
-`
-))
+`)
+);
