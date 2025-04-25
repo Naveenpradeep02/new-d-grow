@@ -119,7 +119,7 @@
               </ul>
             </div>
           </div>
-          <a href="../consultation.html">Digital<span></span>Consultation</a>
+          <a href="../consultation.html">Consultation</a>
           <a href="#"
             >Med<span></span>Grow
             <div class="med-con">
@@ -261,16 +261,20 @@
               standstill by inserting the knowledge of digital marketing with
               the perfect plan.
             </p>
-            <form action="">
+            <form
+              action="https://script.google.com/macros/s/AKfycbwjYvoz7xsZ9o-1Ql_g4ZrrrBu0IFi7xaiZzTqkk9NCB4UYJ2FIu1wUGB3Uu2mg8DwGxA/exec"
+              method="post"
+              onsubmit="handleSubmit(event)"
+            >
               <div class="email">
                 <label for="Yourname">Your name</label>
-                <input type="text" name="Yourname" id="Yourname" />
+                <input type="text" name="Name" id="Yourname" required />
               </div>
               <div class="email">
                 <label for="Youremail">Your email</label>
-                <input type="email" name="Youremail" id="Youremail" />
+                <input type="email" name="Email" id="Youremail" required />
               </div>
-              <button class="btn">SUbmit</button>
+              <button class="btn" id="seoSubmitBtn">SUbmit</button>
             </form>
           </div>
         </div>
@@ -352,5 +356,38 @@
 
     <script src="../../js/main.js "></script>
     <script src="../../js/blog.js "></script>
+    <script>
+      function handleSubmit(e) {
+        const btn = document.getElementById("seoSubmitBtn");
+        btn.textContent = "Submitting...";
+        btn.disabled = true;
+
+        e.preventDefault(); // Stop default form submission
+
+        const form = e.target;
+        const data = new FormData(form);
+
+        fetch(form.action, {
+          method: "POST",
+          body: data,
+        })
+          .then((response) => {
+            if (response.ok) {
+              alert("Form submitted successfully!");
+              location.reload(); // Reload the page after alert
+            } else {
+              alert("There was an error submitting the form.");
+              btn.textContent = "Send";
+              btn.disabled = false;
+            }
+          })
+          .catch((error) => {
+            alert("Something went wrong!");
+            console.error(error);
+            btn.textContent = "Send";
+            btn.disabled = false;
+          });
+      }
+    </script>
   </body>
 </html>
